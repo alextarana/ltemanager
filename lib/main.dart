@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
-import 'package:ltemanager2/models/carrierModel.dart';
-import 'package:ltemanager2/models/cellIDModel.dart';
-import 'package:ltemanager2/models/connectionDetails.dart';
-import 'package:ltemanager2/models/deviceDetails.dart';
-import 'package:ltemanager2/models/titleModel.dart';
+import 'package:ltemanager2/models/CarrierModel.dart';
+import 'package:ltemanager2/models/CellIDModel.dart';
+import 'package:ltemanager2/models/ConnectionDetails.dart';
+import 'package:ltemanager2/models/DeviceDetails.dart';
+import 'package:ltemanager2/models/TitleModel.dart';
 
 void main() {
   runApp(

@@ -1,9 +1,7 @@
-import 'package:clay_containers/widgets/clay_container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ltemanager2/constants/color.dart';
-import 'package:ltemanager2/elements/signalElement.dart';
 
 class CarrierModel extends StatelessWidget {
   final String carrier;

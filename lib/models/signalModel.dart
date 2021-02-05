@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ltemanager2/elements/signalElement.dart';
+import 'package:ltemanager2/elements/SignalElement.dart';
 
 class SignalModel extends StatelessWidget {
   final int signalState;

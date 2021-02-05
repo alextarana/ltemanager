@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ltemanager2/models/signalModel.dart';
+import 'package:ltemanager2/models/SignalModel.dart';
 
 class TitleModel extends StatelessWidget {
   final int signalState;
