@@ -4,4 +4,4 @@ A new application with better graphic and support not only for iOS platform but 
 
 ## Credits
 
-Copyright (C) [date] [Tarana Alex]
+Copyright [yyyy-yyyy] [OWNER]
