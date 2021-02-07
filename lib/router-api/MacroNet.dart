@@ -34,4 +34,93 @@ class MacroNet {
   static const String MACRO_NET_WORK_TYPE_EX_LTE = "101";
   static const String MACRO_NET_WORK_TYPE_EX_LTE_PLUS = "1011";
   static const String MACRO_NET_WORK_TYPE_EX_NR = "111";
+
+  static String handleNetType(dynamic net) {
+    switch (net) {
+      case MACRO_NET_WORK_TYPE_EX_NOSERVICE:
+        return "SERVIZIO NON DISPONIBILE";
+
+      case MACRO_NET_WORK_TYPE_EX_GSM:
+        return "GSM";
+
+      case MACRO_NET_WORK_TYPE_EX_GPRS:
+        return "GPRS";
+
+      case MACRO_NET_WORK_TYPE_EX_EDGE:
+        return "EDGE";
+
+      case MACRO_NET_WORK_TYPE_EX_IS95A:
+      case MACRO_NET_WORK_TYPE_EX_IS95B:
+      case MACRO_NET_WORK_TYPE_EX_CDMA_1X:
+      case MACRO_NET_WORK_TYPE_EX_EVDO_REV_0:
+      case MACRO_NET_WORK_TYPE_EX_EVDO_REV_A:
+      case MACRO_NET_WORK_TYPE_EX_EVDO_REV_B:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_CDMA_1X:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EVDO_REV_0:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EVDO_REV_A:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EVDO_REV_B:
+      case MACRO_NET_WORK_TYPE_EX_EHRPD_REL_0:
+      case MACRO_NET_WORK_TYPE_EX_EHRPD_REL_A:
+      case MACRO_NET_WORK_TYPE_EX_EHRPD_REL_B:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EHRPD_REL_0:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EHRPD_REL_A:
+      case MACRO_NET_WORK_TYPE_EX_HYBRID_EHRPD_REL_B:
+        return "-";
+
+      case MACRO_NET_WORK_TYPE_EX_WCDMA:
+        return "WCDMA";
+
+      case MACRO_NET_WORK_TYPE_EX_HSDPA:
+        return "HSDPA";
+
+      case MACRO_NET_WORK_TYPE_EX_HSUPA:
+        return "HSUPA";
+
+      case MACRO_NET_WORK_TYPE_EX_HSPA:
+        return "HSPA";
+
+      case MACRO_NET_WORK_TYPE_EX_HSPA_PLUS:
+        return "HSPA+";
+
+      case MACRO_NET_WORK_TYPE_EX_DC_HSPA_PLUS:
+        return "DC-HSPA+";
+
+      case MACRO_NET_WORK_TYPE_EX_TD_SCDMA:
+        return "TD-SCDMA";
+
+      case MACRO_NET_WORK_TYPE_EX_TD_HSDPA:
+        return "TD-HSDPA";
+
+      case MACRO_NET_WORK_TYPE_EX_TD_HSUPA:
+        return "TD-HSUPA";
+
+      case MACRO_NET_WORK_TYPE_EX_TD_HSPA:
+        return "TD-HSPA";
+
+      case MACRO_NET_WORK_TYPE_EX_TD_HSPA_PLUS:
+        return "TD-HSPA+";
+
+      case MACRO_NET_WORK_TYPE_EX_LTE:
+        return "4G";
+
+      case MACRO_NET_WORK_TYPE_EX_LTE_PLUS:
+        return "4G+";
+
+      case MACRO_NET_WORK_TYPE_EX_NR:
+        return "5G";
+
+      case MACRO_NET_WORK_TYPE_EX_802_16E:
+        return "-";
+
+      default:
+        return "-";
+    }
+  }
+
+  static String handleCA(String net) {
+    if (net == MACRO_NET_WORK_TYPE_EX_LTE_PLUS) {
+      return "SI";
+    }
+    return "NO";
+  }
 }

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
@@ -6,6 +8,8 @@ import 'package:ltemanager2/models/CellIDModel.dart';
 import 'package:ltemanager2/models/ConnectionDetails.dart';
 import 'package:ltemanager2/models/DeviceDetails.dart';
 import 'package:ltemanager2/models/TitleModel.dart';
+import 'package:ltemanager2/profile/Profile.dart';
+import 'package:ltemanager2/router-api/Router.dart';
 
 void main() {
   runApp(
@@ -46,6 +50,68 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const duration = const Duration(seconds: 20);
+
+  Timer timer;
+
+  var carrier = "-";
+  var cellId = "-";
+  var ipAddress = "-";
+  var rsrp = "-";
+  var rsrq = "-";
+  var sinr = "-";
+  var rssi = "-";
+  var bands = "-";
+  var primaryBand = "-";
+  var bandwidth = "-";
+  var aggregation = "-";
+  var timeElapsed = "-";
+  var model = "-";
+  var net = "-";
+  var usedData = "-";
+
+  int signalState = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _handleApi();
+    if (timer == null)
+      timer = Timer.periodic(duration, (Timer t) {
+        _handleApi();
+      });
+  }
+
+  _handleApi() async {
+    bool loginState = await RouterAPI.loginState()
+        .then((value) => value)
+        .catchError((onError) {
+      print(onError);
+    });
+
+    print("LoginState: " + loginState.toString());
+
+    if (!loginState) {
+      loginState = await RouterAPI.login(Profile(
+        ip: "192.168.8.1",
+        name: "b535",
+        username: "admin",
+        password: "admin1234",
+      )).then((value) => value).catchError((onError) {
+        //open login page
+      });
+    } else {
+      var localState = await RouterAPI.statusInformation()
+          .then((value) => value)
+          .catchError((onError) {
+        print("errore:" + onError);
+      });
+      setState(() {
+        signalState = localState;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 TitleModel(
-                  signalState: 4,
+                  signalState: signalState,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 5.0),
@@ -71,10 +137,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         children: [
                           CarrierModel(
-                            carrier: "WINDTRE",
+                            carrier: carrier,
                           ),
                           CellIDModel(
-                            cellID: "124017",
+                            cellID: cellId,
                           ),
                         ],
                       ),
@@ -84,24 +150,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 5.0),
                   child: ConnectionDetailsModel(
-                    ipAddress: "192.168.8.1",
-                    rsrp: "null",
-                    rsrq: "null",
-                    sinr: "null",
-                    rssi: "null",
-                    bands: "null",
-                    primaryBand: "null",
-                    bandwidth: "null",
-                    aggregation: "null",
+                    ipAddress: ipAddress,
+                    rsrp: rsrp,
+                    rsrq: rsrq,
+                    sinr: sinr,
+                    rssi: rssi,
+                    bands: bands,
+                    primaryBand: primaryBand,
+                    bandwidth: bandwidth,
+                    aggregation: aggregation,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 5.0),
                   child: DeviceDetailsModel(
-                    model: 'null',
-                    net: 'null',
-                    usedData: 'null',
-                    timeElapsed: 'null',
+                    model: model,
+                    net: net,
+                    usedData: usedData,
+                    timeElapsed: timeElapsed,
                   ),
                 ),
               ],
