@@ -86,10 +86,10 @@ class _MyHomePageState extends State<MyHomePage> {
     bool loginState = await RouterAPI.loginState()
         .then((value) => value)
         .catchError((onError) {
-      print(onError);
+      //print(onError);
     });
 
-    print("LoginState: " + loginState.toString());
+    //print("LoginState: " + loginState.toString());
 
     if (!loginState) {
       loginState = await RouterAPI.login(Profile(
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
       var localState = await RouterAPI.statusInformation()
           .then((value) => value)
           .catchError((onError) {
-        print("errore:" + onError);
+        //print("errore:" + onError);
       });
       setState(() {
         signalState = localState;

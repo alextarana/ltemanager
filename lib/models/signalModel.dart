@@ -8,7 +8,7 @@ class SignalModel extends StatelessWidget {
   const SignalModel({Key key, @required this.signalState}) : super(key: key);
 
   _buildSignalStateElements() {
-    print(signalState);
+    //print(signalState);
     List<Widget> list = [];
 
     for (int i = 0; i < numberOfElements; i++) {

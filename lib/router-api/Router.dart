@@ -42,28 +42,28 @@ class RouterAPI {
     }
   }
 
-  static handleHeaders(Map<String, String> headers) {
-    if (headers["__RequestVerificationTokenone"] != null) {
-      if (headers["__RequestVerificationTokenone"].isNotEmpty) {
-        _requestTokenOne = headers["__RequestVerificationTokenone"].toString();
+  static handleHeaders(Map<String, String> headers) async {
+    if (headers["__requestverificationtokenone"] != null) {
+      if (headers["__requestverificationtokenone"].isNotEmpty) {
+        _requestTokenOne = headers["__requestverificationtokenone"].toString();
       }
     }
 
-    if (headers["__RequestVerificationTokentwo"] != null) {
-      if (headers["__RequestVerificationTokentwo"].isNotEmpty) {
-        _requestTokenTwo = headers["__RequestVerificationTokentwo"].toString();
+    if (headers["__requestverificationtokentwo"] != null) {
+      if (headers["__requestverificationtokentwo"].isNotEmpty) {
+        _requestTokenTwo = headers["__requestverificationtokentwo"].toString();
       }
     }
 
-    if (headers["__RequestVerificationToken"] != null) {
-      if (headers["__RequestVerificationToken"].isNotEmpty) {
-        _requestToken = headers["__RequestVerificationToken"].toString();
+    if (headers["__requestVerificationtoken"] != null) {
+      if (headers["__requestVerificationtoken"].isNotEmpty) {
+        _requestToken = headers["__requestverificationtoken"].toString();
       }
     }
 
-    if (headers["Set-Cookie"] != null) {
-      if (headers["Set-Cookie"].isNotEmpty) {
-        _sessionCookie = headers["Set-Cookie"];
+    if (headers["set-cookie"] != null) {
+      if (headers["set-cookie"].isNotEmpty) {
+        _sessionCookie = headers["set-cookie"].toString();
         var tmp = _sessionCookie.split(";");
         var tmpString = tmp[0].split("=");
 
@@ -124,17 +124,16 @@ class RouterAPI {
     );
 
     if (response.statusCode == 200) {
-      print(response.body);
+      //print(response.body);
+
       var message = response.body;
 
       final transformer = Xml2Json();
 
       transformer.parse(message);
       final responseDict = jsonDecode(transformer.toParker());
-      //print(responseDict.toString());
 
-      handleHeaders(response.headers);
-
+      await handleHeaders(response.headers);
       return responseDict;
     } else {
       Dev.log(response.body, name: "FAILED RESPONSE BODY");
@@ -225,6 +224,7 @@ class RouterAPI {
     });
   }
 
+  //tested and ok
   static Future<bool> login(Profile p) async {
     final username = p.getUsername();
     final password = p.getPassword();
@@ -243,17 +243,18 @@ class RouterAPI {
       username: username,
     );
 
-    final authinfo = hex.encode(utf8.encode(base64.encode(sha256
-        .convert(utf8.encode(username +
-            hex.encode(utf8.encode(
-                base64.encode(sha256.convert(utf8.encode(password)).bytes))) +
-            _requestToken))
+    final pass = base64.encode(
+        ascii.encode(hex.encode(sha256.convert(utf8.encode(password)).bytes)));
+
+    final authinfo = base64.encode(ascii.encode(hex.encode(sha256
+        .convert(utf8.encode(username) +
+            utf8.encode(pass) +
+            utf8.encode(_requestToken))
         .bytes)));
 
     final logininfo =
         "<?xml version=\"1.0\"encoding=\"UTF-8\"?><request><Username>$username</Username><Password>$authinfo</Password><password_type>4</password_type>";
 
-    print(logininfo);
     return await _post("/api/user/login", logininfo).then((result) {
       if (result["response"] != null) {
         if (result["response"] != "OK") {
@@ -263,6 +264,7 @@ class RouterAPI {
           return false;
         } else {
           Dev.log("OK", name: "LOGIN");
+          //loginState();
           return true;
         }
       } else {
@@ -512,6 +514,7 @@ class RouterAPI {
       if (result["response"]["SignalIcon"] != null) {
         return int.parse(result["response"]["SignalIcon"]);
       }
+
       return 0;
     }).catchError((onError) {
       return 0;
@@ -575,7 +578,7 @@ class RouterAPI {
     }
 
     String networkmodeinfo =
-        "<?xml version:\"1.0\" encoding=\"UTF-8\"?><request><NetworkMode>0302</NetworkMode><NetworkBand>3FFFFFFF</NetworkBand><LTEBand>$ltesumStr</LTEBand></request>";
+        "<?xml version:\"1.0\" encoding=\"UTF-8\"?><request><NetworkMode>03</NetworkMode><NetworkBand>3FFFFFFF</NetworkBand><LTEBand>$ltesumStr</LTEBand></request>";
 
     return await _post("/api/net/net-mode", networkmodeinfo).then((result) {
       if (result["response"] != null) {
