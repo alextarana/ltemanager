@@ -27,11 +27,11 @@ class CarrierModel extends StatelessWidget {
                 child: Text(
                   "carrier".tr(),
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.bigShouldersDisplay(
+                  style: GoogleFonts.quicksand(
                     textStyle: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[900],
-                      fontSize: 18,
+                      fontSize: 20,
                     ),
                   ),
                 ),
@@ -43,11 +43,11 @@ class CarrierModel extends StatelessWidget {
                   child: Text(
                     carrier,
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.bigShouldersDisplay(
+                    style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey[700],
-                        fontSize: 18,
+                        fontSize: 16,
                       ),
                     ),
                   ),

@@ -21,7 +21,7 @@ class TitleModel extends StatelessWidget {
               child: Text(
                 "application-title".tr(),
                 textAlign: TextAlign.center,
-                style: GoogleFonts.bigShouldersDisplay(
+                style: GoogleFonts.quicksand(
                   textStyle: TextStyle(
                     color: Colors.white70,
                     fontWeight: FontWeight.w900,
@@ -30,8 +30,11 @@ class TitleModel extends StatelessWidget {
                 ),
               ),
             ),
-            SignalModel(
-              signalState: this.signalState,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0, top: 8.0),
+              child: SignalModel(
+                signalState: this.signalState,
+              ),
             ),
           ],
         ),

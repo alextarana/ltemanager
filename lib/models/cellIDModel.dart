@@ -31,11 +31,11 @@ class CellIDModel extends StatelessWidget {
                 child: Text(
                   "cell-id".tr(),
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.bigShouldersDisplay(
+                  style: GoogleFonts.quicksand(
                     textStyle: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[900],
-                      fontSize: 18,
+                      fontSize: 20,
                     ),
                   ),
                 ),
@@ -58,11 +58,11 @@ class CellIDModel extends StatelessWidget {
                         child: Text(
                           cellID,
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.bigShouldersDisplay(
+                          style: GoogleFonts.quicksand(
                             textStyle: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.grey[700],
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                         ),

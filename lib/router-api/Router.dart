@@ -432,7 +432,7 @@ class RouterAPI {
     });
   }
 
-  static Future<Map<String, String>> deviceInformation() async {
+  static Future<String> deviceInformation() async {
     return await _get("/api/device/information").then((result) {
       Map<String, String> results = {
         "DeviceName": "-",
@@ -452,16 +452,17 @@ class RouterAPI {
         int uptime = int.parse(result["response"]["uptime"]);
 
         var time =
-            "${uptime / 3600}h ${uptime % 3600}m ${(uptime % 3600) % 60}s";
+            "${uptime ~/ 3600.0}h ${((uptime ~/ 3600.0) ~/ 60).toInt()}m ${(uptime % 3600) % 60}s";
 
         results["uptime"] = time;
       }
+      return jsonEncode(results);
     }).catchError((onError) {
-      return {
+      return jsonEncode({
         "DeviceName": "-",
         "WanIPAddress": "-",
         "uptime": "-",
-      };
+      });
     });
   }
 
@@ -506,7 +507,7 @@ class RouterAPI {
             double.parse(result["response"]["CurrentMonthUpload"]) / 1e+9;
       }
 
-      return dataUsage.toString() + "GB";
+      return dataUsage.toStringAsFixed(2).toString() + "GB";
     }).catchError((onError) {
       return "-";
     });

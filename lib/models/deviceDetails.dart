@@ -24,7 +24,7 @@ class DeviceDetailsModel extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           "$field: $detail",
-          style: GoogleFonts.bigShouldersDisplay(
+          style: GoogleFonts.quicksand(
             textStyle: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.grey[800],
@@ -55,11 +55,11 @@ class DeviceDetailsModel extends StatelessWidget {
               child: Text(
                 "device-details".tr(),
                 textAlign: TextAlign.center,
-                style: GoogleFonts.bigShouldersDisplay(
+                style: GoogleFonts.quicksand(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[900],
-                    fontSize: 18,
+                    fontSize: 20,
                   ),
                 ),
               ),

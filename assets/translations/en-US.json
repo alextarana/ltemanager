@@ -40,5 +40,6 @@
     "Accesso al Router":"Router login",
     "Effettua il login con le stesse credenziali del pannello di controllo Huawei":"Use your credential in order to log in into the router",
     "SI":"YES",
+    "NO":"NO",
     "Done":"Go Back"
 }

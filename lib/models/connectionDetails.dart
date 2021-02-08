@@ -34,7 +34,7 @@ class ConnectionDetailsModel extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           "$field: $detail",
-          style: GoogleFonts.bigShouldersDisplay(
+          style: GoogleFonts.quicksand(
             textStyle: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.grey[800],
@@ -65,11 +65,11 @@ class ConnectionDetailsModel extends StatelessWidget {
                 child: Text(
                   "connection-details".tr(),
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.bigShouldersDisplay(
+                  style: GoogleFonts.quicksand(
                     textStyle: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[900],
-                      fontSize: 18,
+                      fontSize: 20,
                     ),
                   ),
                 ),
@@ -77,6 +77,24 @@ class ConnectionDetailsModel extends StatelessWidget {
               _buildElement("INDIRIZZO IP".tr(), ipAddress),
               Table(
                 children: [
+                  TableRow(children: [
+                    TableCell(
+                        child: Padding(
+                      padding: const EdgeInsets.only(bottom: 1.0, top: 1.0),
+                      child: Container(
+                        height: 0.5,
+                        color: Colors.black,
+                      ),
+                    )),
+                    TableCell(
+                        child: Padding(
+                      padding: const EdgeInsets.only(bottom: 1.0, top: 1.0),
+                      child: Container(
+                        height: 0.5,
+                        color: Colors.black,
+                      ),
+                    )),
+                  ]),
                   TableRow(
                     children: [
                       _buildElement("RSRP".tr(), rsrp),
@@ -94,7 +112,7 @@ class ConnectionDetailsModel extends StatelessWidget {
                         child: Padding(
                       padding: const EdgeInsets.only(bottom: 1.0, top: 1.0),
                       child: Container(
-                        height: 2,
+                        height: 0.5,
                         color: Colors.black,
                       ),
                     )),
@@ -102,25 +120,21 @@ class ConnectionDetailsModel extends StatelessWidget {
                         child: Padding(
                       padding: const EdgeInsets.only(bottom: 1.0, top: 1.0),
                       child: Container(
-                        height: 2,
+                        height: 0.5,
                         color: Colors.black,
                       ),
                     )),
                   ]),
                   TableRow(
                     children: [
-                      _buildElement("BANDE".tr(), bands),
                       _buildElement("B. PRIMARIA".tr(), primaryBand),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      _buildElement("BANDWIDTH".tr(), bandwidth),
                       _buildElement("AGGREGAZIONE".tr(), aggregation),
                     ],
                   ),
                 ],
               ),
+              _buildElement("BANDWIDTH".tr(), bandwidth),
+              _buildElement("BANDE".tr(), bands),
             ],
           ),
         ),
