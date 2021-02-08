@@ -306,7 +306,7 @@ class RouterAPI {
     });
   }
 
-  static Future<Map<String, String>> cellStatus() async {
+  static Future<String> cellStatus() async {
     return await _get("/api/device/signal").then((result) {
       Map<String, String> results = {
         "cell-id": "-",
@@ -349,21 +349,24 @@ class RouterAPI {
           }
         } else {
           results["cell-id"] = "-";
-          return results;
+
+          return jsonEncode(results).toString();
         }
       } else {
         results["cell-id"] = "-";
-        return results;
+
+        return jsonEncode(results).toString();
       }
+      return jsonEncode(results).toString();
     }).catchError((onError) {
-      return {
+      return jsonEncode({
         "cell-id": "-",
         "link": "",
-      };
+      }).toString();
     });
   }
 
-  static Future<String> plmnStatus() async {
+  static Future<String> getCarrier() async {
     return await _get("/api/net/current-plmn").then((result) {
       var carrier = "Sconosciuto";
       if (result["response"]["FullName"] != null) {
@@ -375,7 +378,7 @@ class RouterAPI {
     });
   }
 
-  static Future<Map<String, String>> signalStatus() async {
+  static Future<String> signalStatus() async {
     return await _get("/api/device/signal").then((result) {
       Map<String, String> results = {
         "rsrq": "-",
@@ -415,9 +418,9 @@ class RouterAPI {
         results["ulbandwidth"] = result["response"]["ulbandwidth"];
       }
 
-      return results;
+      return jsonEncode(results).toString();
     }).catchError((onError) {
-      return {
+      return jsonEncode({
         "rsrq": "-",
         "rsrp": "-",
         "rssi": "-",
@@ -425,7 +428,7 @@ class RouterAPI {
         "band": "-",
         "dlbandwidth": "-",
         "ulbandwidth": "-"
-      };
+      }).toString();
     });
   }
 
@@ -521,7 +524,7 @@ class RouterAPI {
     });
   }
 
-  static Future<Map<String, String>> netModeInformation() async {
+  static Future<String> netModeInformation() async {
     return await _get("/api/monitoring/status").then((result) {
       Map<String, String> results = {
         "net": "-",
@@ -535,16 +538,16 @@ class RouterAPI {
             MacroNet.handleCA(result["response"]["CurrentNetworkTypeEx"]);
       }
 
-      return results;
+      return jsonEncode(results);
     }).catchError((onError) {
-      return {
+      return jsonEncode({
         "net": "-",
         "ca": "-",
-      };
+      });
     });
   }
 
-  static Future<String> currentNetInformation() async {
+  static Future<String> currentBands() async {
     return await _get("/api/net/net-mode").then((result) {
       if (result["response"]["LTEBand"] != null) {
         return _bandsDataToString(result["response"]["LTEBand"]);

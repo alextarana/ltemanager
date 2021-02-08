@@ -3,11 +3,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ltemanager2/constants/color.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CellIDModel extends StatelessWidget {
   final String cellID;
+  final String link;
 
-  const CellIDModel({Key key, @required this.cellID}) : super(key: key);
+  const CellIDModel({Key key, @required this.cellID, @required this.link})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,13 @@ class CellIDModel extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 6.0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () async {
+                    if (await canLaunch(link)) {
+                      await launch(link);
+                    } else {
+                      throw 'Could not launch $link';
+                    }
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

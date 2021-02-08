@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -50,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const duration = const Duration(seconds: 20);
+  static const duration = const Duration(seconds: 5);
 
   Timer timer;
 
@@ -69,6 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
   var model = "-";
   var net = "-";
   var usedData = "-";
+
+  var link = "";
 
   int signalState = 0;
 
@@ -89,8 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
       //print(onError);
     });
 
-    //print("LoginState: " + loginState.toString());
-
     if (!loginState) {
       loginState = await RouterAPI.login(Profile(
         ip: "192.168.8.1",
@@ -106,8 +107,56 @@ class _MyHomePageState extends State<MyHomePage> {
           .catchError((onError) {
         //print("errore:" + onError);
       });
+
+      var localBandsInfo = await RouterAPI.currentBands()
+          .then((value) => value)
+          .catchError((onError) {
+        //print("errore:" + onError);
+      });
+
+      var localCarrier = await RouterAPI.getCarrier()
+          .then((value) => value)
+          .catchError((onError) {
+        //print("errore:" + onError);
+      });
+
+      var localCellInfo = await RouterAPI.cellStatus()
+          .then((value) => value)
+          .catchError((onError) {
+        //print("errore:" + onError);
+      });
+
+      var cellDict = jsonDecode(localCellInfo);
+
+      var localSignalInfo = await RouterAPI.signalStatus()
+          .then((value) => value)
+          .catchError((onError) {
+        //print("errore:" + onError);
+      });
+
+      var signalDict = jsonDecode(localSignalInfo);
+
+      var localNetModeInfo = await RouterAPI.netModeInformation()
+          .then((value) => value)
+          .catchError((onError) {
+        //print("errore:" + onError);
+      });
+
+      var netModeDict = jsonDecode(localNetModeInfo);
+
       setState(() {
         signalState = localState;
+        carrier = localCarrier;
+        cellId = cellDict["cell-id"];
+        link = cellDict["link"];
+        rsrp = signalDict["rsrp"];
+        rsrq = signalDict["rsrq"];
+        rssi = signalDict["rssi"];
+        sinr = signalDict["sinr"];
+        aggregation = netModeDict["ca"];
+        primaryBand = signalDict["band"];
+        bands = localBandsInfo;
+        bandwidth = "${signalDict["dlbandwidth"]}/${signalDict["ulbandwidth"]}";
       });
     }
   }
@@ -141,6 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           CellIDModel(
                             cellID: cellId,
+                            link: link,
                           ),
                         ],
                       ),
@@ -158,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     bands: bands,
                     primaryBand: primaryBand,
                     bandwidth: bandwidth,
-                    aggregation: aggregation,
+                    aggregation: aggregation.tr(),
                   ),
                 ),
                 Padding(
