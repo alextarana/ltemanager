@@ -22,6 +22,7 @@
 android/
 ios/
 web/
+.flutter*
 
 # Flutter/Dart/Pub related
 **/doc/api/
