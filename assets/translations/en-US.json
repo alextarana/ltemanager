@@ -1,7 +1,7 @@
 {
     "application-title": "LTE MANAGER",
     "signal-strength": "SIGNAL",
-    "profile": "PROFILE",
+    "profile": "ACCOUNT",
     "carrier": "CARRIER",
     "cell-id": "CELL ID (eNodeB)",
     "connection-details": "CONNECTION DETAILS",
@@ -41,5 +41,9 @@
     "Effettua il login con le stesse credenziali del pannello di controllo Huawei":"Use your credential in order to log in into the router",
     "SI":"YES",
     "NO":"NO",
-    "Done":"Go Back"
+    "Done":"Go Back",
+    "edit":"CHANGE",
+    "fill-in":"Use your credential to log into your Huawei router.",
+    "configuration-name": "Configuration Name",
+    "login-error": "Wrong username, password or IP address. Retry!"
 }

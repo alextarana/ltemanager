@@ -48,5 +48,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-6208520310131435~8031399030</string>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 </dict>
 </plist>

@@ -48,23 +48,22 @@ class DeviceDetailsModel extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ExpansionTile(
-            initiallyExpanded: false,
-            title: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                "device-details".tr(),
-                textAlign: TextAlign.center,
-                style: GoogleFonts.quicksand(
-                  textStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[900],
-                    fontSize: 20,
+          child: Column(
+            children: [
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  "device-details".tr(),
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.quicksand(
+                    textStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[900],
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),
-            ),
-            children: [
               Table(
                 children: [
                   TableRow(

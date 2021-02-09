@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Profile {
   String _name;
   String _ip;
@@ -29,5 +31,32 @@ class Profile {
 
   String getUsername() {
     return _username;
+  }
+
+  factory Profile.fromJson(Map<String, dynamic> json) {
+    return Profile(
+      name: json["name"],
+      ip: json["ip"],
+      password: json["password"],
+      username: json["username"],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "name": this._name,
+      "ip": this._ip,
+      "password": this._password,
+      "username": this._username,
+    };
+  }
+
+  String toString() {
+    return jsonEncode({
+      "name": this._name,
+      "ip": this._ip,
+      "password": this._password,
+      "username": this._username,
+    });
   }
 }

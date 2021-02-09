@@ -5,6 +5,7 @@ import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'package:ltemanager2/profile/Profile.dart';
 import 'package:ltemanager2/router-api/MacroNet.dart';
+import 'package:ltemanager2/utilities/SharedPreferencesFunctions.dart';
 import 'package:xml2json/xml2json.dart';
 import 'package:convert/convert.dart';
 
@@ -23,6 +24,10 @@ class RouterAPI {
   factory RouterAPI() => _singleton;
 
   RouterAPI._internal();
+
+  static bool isInizialized() {
+    return (_profile != null);
+  }
 
   static initialize({
     String ip,
@@ -264,11 +269,12 @@ class RouterAPI {
           return false;
         } else {
           Dev.log("OK", name: "LOGIN");
-          //loginState();
+          saveSharedPref("logout", "true");
+
           return true;
         }
       } else {
-        //log("KO - ERROR 2", name: "LOGIN");
+        Dev.log("KO - ERROR 2", name: "LOGIN");
         _sessionCookie = "";
         _requestToken = "";
         return false;
@@ -291,6 +297,7 @@ class RouterAPI {
           Dev.log("KO - ERROR 1: " + result["response"], name: "LOGOUT");
         } else {
           Dev.log("OK", name: "LOGOUT");
+          saveSharedPref("logout", "false");
           _sessionID = "";
           _token = "";
           _requestToken = "";
@@ -302,7 +309,7 @@ class RouterAPI {
         Dev.log("KO - ERROR 2", name: "LOGOUT");
       }
     }).catchError((onError) {
-      Dev.log("KO - ERROR 3: " + onError, name: "LOGOUT");
+      Dev.log("KO - ERROR 3: " + onError.toString(), name: "LOGOUT");
     });
   }
 
@@ -582,7 +589,7 @@ class RouterAPI {
     }
 
     String networkmodeinfo =
-        "<?xml version:\"1.0\" encoding=\"UTF-8\"?><request><NetworkMode>03</NetworkMode><NetworkBand>3FFFFFFF</NetworkBand><LTEBand>$ltesumStr</LTEBand></request>";
+        "<?xml version:\"1.0\" encoding=\"UTF-8\"?><request><NetworkMode>00</NetworkMode><NetworkBand>3FFFFFFF</NetworkBand><LTEBand>$ltesumStr</LTEBand></request>";
 
     return await _post("/api/net/net-mode", networkmodeinfo).then((result) {
       if (result["response"] != null) {

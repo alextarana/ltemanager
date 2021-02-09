@@ -41,6 +41,9 @@
     "Effettua il login con le stesse credenziali del pannello di controllo Huawei":"Effettua il login con le stesse credenziali del pannello di controllo Huawei",
     "SI":"SI",
     "NO":"NO",
-    "Done":"Indietro"
-
+    "Done":"Indietro",
+    "edit":"CAMBIA",
+    "fill-in":"Usa le tue credenziali per entrare nel tuo router Huawei.",
+    "configuration-name": "Nome Configurazione",
+    "login-error": "Username, password o indirizzo IP sbagliati. Riprova!"
 }
