@@ -23,6 +23,10 @@ class ProfileRouter {
     saveSharedPref("indexProfileSelected", index.toString());
   }
 
+  static List<Profile> getProfiles() {
+    return _profiles;
+  }
+
   static Profile getProfileAt({int index}) {
     return _profiles[index];
   }

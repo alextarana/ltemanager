@@ -45,5 +45,6 @@
     "edit":"CAMBIA",
     "fill-in":"Usa le tue credenziali per entrare nel tuo router Huawei.",
     "configuration-name": "Nome Configurazione",
-    "login-error": "Username, password o indirizzo IP sbagliati. Riprova!"
+    "login-error": "Username, password o indirizzo IP sbagliati. Riprova!",
+    "defaultSelectedProfile": "Seleziona una configurazione"
 }

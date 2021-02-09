@@ -24,6 +24,8 @@ class _LoginElementsState extends State<LoginElements> {
 
   final nickController = TextEditingController();
 
+  var profileName = "defaultSelectedProfile".tr();
+
   @override
   Widget build(BuildContext context) {
     //print(isActive);
@@ -53,6 +55,25 @@ class _LoginElementsState extends State<LoginElements> {
                     ),
                   ),
                 ),
+              ),
+              DropdownButton<Profile>(
+                autofocus: false,
+                hint: Text(profileName),
+                items: ProfileRouter.getProfiles().map((Profile value) {
+                  return DropdownMenuItem<Profile>(
+                    value: value,
+                    child: Text(value.getName()),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    profileName = value.getName();
+                    nickController.text = value.getName();
+                    ipController.text = value.getIp();
+                    usernameController.text = value.getUsername();
+                    passwordController.text = value.getPassword();
+                  });
+                },
               ),
               Column(
                 children: [
