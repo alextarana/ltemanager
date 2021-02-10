@@ -163,7 +163,7 @@ class RouterAPI {
   }
 
   static String _bandsDataToString(String data) {
-    if ((data == "20880800C5") || (data == "20000800C5")) {
+    if ((int.parse(data, radix: 16) & 0x3fffffff) == 0x3fffffff) {
       return "AUTO";
     }
 
@@ -269,7 +269,7 @@ class RouterAPI {
           return false;
         } else {
           Dev.log("OK", name: "LOGIN");
-          saveSharedPref("logout", "true");
+          saveSharedPref("logout", "false");
 
           return true;
         }
@@ -297,7 +297,7 @@ class RouterAPI {
           Dev.log("KO - ERROR 1: " + result["response"], name: "LOGOUT");
         } else {
           Dev.log("OK", name: "LOGOUT");
-          saveSharedPref("logout", "false");
+          saveSharedPref("logout", "true");
           _sessionID = "";
           _token = "";
           _requestToken = "";

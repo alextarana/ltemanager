@@ -35,6 +35,8 @@
     "BANDA 28 (700MHz)":"BANDA 28 (700MHz)",
     "BANDA 40 (2300MHz)":"BANDA 40 (2300MHz)",
     "BANDA 8 (900MHz)":"BANDA 8 (900MHz)",
+    "BANDA 32 (1500MHz)":"BANDA 32 (1500MHz)",
+    "BANDA 38 (2600MHz)":"BANDA 38 (2600MHz)",
     "APPLICA":"APPLICA",
     "SI":"SI",
     "NO":"NO",
@@ -43,5 +45,8 @@
     "fill-in":"Usa le tue credenziali per entrare nel tuo router Huawei.",
     "configuration-name": "Nome Configurazione",
     "login-error": "Username, password o indirizzo IP sbagliati. Riprova!",
-    "defaultSelectedProfile": "Seleziona una configurazione"
+    "defaultSelectedProfile": "Seleziona una configurazione",
+    "bands-cancel":"Premi fuori dalla finestra per uscire",
+    "bands-loading":"Configurazione bande in corso...",
+    "bands-loading-error":"Errore. Riprova!"
 }

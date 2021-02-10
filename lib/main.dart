@@ -100,6 +100,57 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
+  void startTimer() {
+    _handleApi();
+    if (timer == null) {
+      timer = Timer.periodic(duration, (Timer t) {
+        _handleApi();
+      });
+    }
+  }
+
+  //not used for now
+  void pauseTimer() {
+    if (timer != null) timer.cancel();
+  }
+
+  void _currentBandsSet(String bands) {
+    var bandsCollection = bands.replaceAll("B", "").split("+");
+
+    for (String band in bandsCollection) {
+      if (band == "7") {
+        saveSharedPref("_7_band", "true");
+      } else if (band == "3") {
+        saveSharedPref("_3_band", "true");
+      } else if (band == "1") {
+        saveSharedPref("_1_band", "true");
+      } else if (band == "20") {
+        saveSharedPref("_20_band", "true");
+      } else if (band == "40") {
+        saveSharedPref("_40_band", "true");
+      } else if (band == "28") {
+        saveSharedPref("_28_band", "true");
+      } else if (band == "8") {
+        saveSharedPref("_8_band", "true");
+      } else if (band == "32") {
+        saveSharedPref("_32_band", "true");
+      } else if (band == "38") {
+        saveSharedPref("_38_band", "true");
+      } else {
+        saveSharedPref("_auto_band", "true");
+      }
+    }
+  }
+
+  //not used for now
+  void unpauseTimer() => startTimer();
+
   _handleApi() async {
     bool loginState = await RouterAPI.loginState()
         .then((value) => value)
@@ -113,7 +164,8 @@ class _MyHomePageState extends State<MyHomePage> {
       indexProfileSelected = int.parse(indexProfileSelectedStr);
     } catch (ex) {
       if (!isLoginPopupOpened) {
-        showMyDialog(context, "LOGIN", null);
+        print("showMyDialog called 1");
+        showMyDialog(context);
         isLoginPopupOpened = true;
       }
 
@@ -122,7 +174,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     if (indexProfileSelected == -1) {
       if (!isLoginPopupOpened) {
-        showMyDialog(context, "LOGIN", null);
+        print("showMyDialog called 2");
+        showMyDialog(context);
         isLoginPopupOpened = true;
       }
 
@@ -134,11 +187,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
     String logoutForced = await readSharedPref("logout");
 
-    if (logoutForced == "false") {
-      if (!isLoginPopupOpened) {
-        showMyDialog(context, "LOGIN", null);
-        isLoginPopupOpened = true;
-      }
+    if (logoutForced == "true") {
+      setState(() {
+        profileName = "-";
+        signalState = 0;
+        carrier = "-";
+        cellId = "-";
+        link = "";
+        rsrp = "-";
+        rsrq = "-";
+        rssi = "-";
+        sinr = "-";
+        aggregation = "-";
+        net = "-";
+        usedData = "-";
+        ipAddress = "-";
+        timeElapsed = "-";
+        model = "-";
+        primaryBand = "-";
+        bands = "-";
+
+        bandwidth = "-/-";
+      });
       return;
     }
 
@@ -147,12 +217,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ProfileRouter.getProfileAt(index: indexProfileSelected))
           .then((value) => value)
           .catchError((onError) {
-        setState(() {
-          if (!isLoginPopupOpened) {
-            showMyDialog(context, "LOGIN", null);
-            isLoginPopupOpened = true;
-          }
-        });
+        if (!isLoginPopupOpened) {
+          print("showMyDialog called  3");
+          showMyDialog(context);
+          isLoginPopupOpened = true;
+        }
       });
 
       if (loginState) {
@@ -160,11 +229,13 @@ class _MyHomePageState extends State<MyHomePage> {
           profileName = currentProfile.getName();
         });
       } else if (!isLoginPopupOpened) {
-        showMyDialog(context, "LOGIN", null);
+        print("showMyDialog called 4");
+        showMyDialog(context);
         isLoginPopupOpened = true;
       }
     } else {
       isLoginPopupOpened = false;
+
       var localState = await RouterAPI.statusInformation()
           .then((value) => value)
           .catchError((onError) {});
@@ -205,6 +276,8 @@ class _MyHomePageState extends State<MyHomePage> {
           .then((value) => value)
           .catchError((onError) {});
 
+      _currentBandsSet(localBandsInfo);
+
       setState(() {
         profileName = currentProfile.getName();
         signalState = localState;
@@ -223,7 +296,6 @@ class _MyHomePageState extends State<MyHomePage> {
         model = deviceDict["DeviceName"];
         primaryBand = signalDict["band"];
         bands = localBandsInfo;
-        isNotLoggedIn = false;
         bandwidth = "${signalDict["dlbandwidth"]}/${signalDict["ulbandwidth"]}";
       });
     }
@@ -266,8 +338,7 @@ class _MyHomePageState extends State<MyHomePage> {
             right: MediaQuery.of(context).size.width * 0.03,
           ),
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: ListView(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
@@ -286,19 +357,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         timeElapsed: timeElapsed,
                       ),
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        //crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              CarrierModel(
-                                carrier: carrier,
-                              ),
-                              CellIDModel(
-                                cellID: cellId,
-                                link: link,
-                              ),
-                            ],
+                          Expanded(
+                            child: CarrierModel(
+                              carrier: carrier,
+                            ),
+                          ),
+                          Expanded(
+                            child: CellIDModel(
+                              cellID: cellId,
+                              link: link,
+                            ),
                           ),
                         ],
                       ),
@@ -325,7 +396,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       AdsModel(),
                       BandsButtonModel(
-                          enabled: (!isNotLoggedIn) ? true : false),
+                        enabled: (!isLoginPopupOpened) ? true : false,
+                      ),
                     ],
                   ),
                 ),

@@ -59,4 +59,15 @@ class Profile {
       "username": this._username,
     });
   }
+
+  bool operator ==(Object other) {
+    Profile p;
+    if (other.runtimeType == Profile) {
+      p = other;
+    }
+    return (this._name == p._name);
+  }
+
+  @override
+  int get hashCode => super.hashCode;
 }

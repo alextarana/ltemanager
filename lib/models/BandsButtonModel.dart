@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ltemanager2/constants/color.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:ltemanager2/popup/BandsPopup.dart';
 
 class BandsButtonModel extends StatelessWidget {
   final enabled;
@@ -11,8 +12,10 @@ class BandsButtonModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        if (enabled) {}
+      onTap: () async {
+        if (enabled) {
+          await showMyDialogBands(context);
+        }
       },
       child: Card(
         color: BTN_BORDER_DEFAULT,

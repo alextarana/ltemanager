@@ -20,63 +20,60 @@ class CellIDModel extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       elevation: 4,
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.45,
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            children: [
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  "cell-id".tr(),
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.quicksand(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[900],
-                      fontSize: 20,
-                    ),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "cell-id".tr(),
+                textAlign: TextAlign.center,
+                style: GoogleFonts.quicksand(
+                  textStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[900],
+                    fontSize: 20,
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 6.0),
-                child: GestureDetector(
-                  onTap: () async {
-                    if (await canLaunch(link)) {
-                      await launch(link);
-                    } else {
-                      throw 'Could not launch $link';
-                    }
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Text(
-                          cellID,
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.quicksand(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey[700],
-                              fontSize: 16,
-                            ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 6.0),
+              child: GestureDetector(
+                onTap: () async {
+                  if (await canLaunch(link)) {
+                    await launch(link);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        cellID,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.quicksand(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey[700],
+                            fontSize: 16,
                           ),
                         ),
                       ),
-                      Icon(
-                        FontAwesomeIcons.link,
-                        size: 15,
-                      ),
-                    ],
-                  ),
+                    ),
+                    Icon(
+                      FontAwesomeIcons.link,
+                      size: 15,
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

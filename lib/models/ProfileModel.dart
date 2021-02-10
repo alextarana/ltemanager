@@ -73,7 +73,7 @@ class _ProfileModelState extends State<ProfileModel> {
                       child: GestureDetector(
                         onTap: () async {
                           print("change pressed");
-                          await showMyDialog(context, "LOGIN", null);
+                          await showMyDialog(context);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
