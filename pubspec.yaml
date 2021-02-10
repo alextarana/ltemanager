@@ -33,6 +33,9 @@ dependencies:
   crypto: ^2.1.5
   url_launcher: ^5.7.10
   flutter_native_admob: ^2.1.0+3
+  #firebase_core: ^0.7.0
+  #firebase_admob: ^0.11.0+1
+  #path_provider: ^1.6.27
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

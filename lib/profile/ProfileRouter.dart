@@ -13,10 +13,16 @@ class ProfileRouter {
   ProfileRouter._internal();
 
   static int addProfile(Profile p) {
+    print(toJson());
     if (_profiles.contains(p)) return _profiles.indexOf(p);
     _profiles.add(p);
+
     saveSharedPref("profiles", toJson());
-    return _profiles.length - 1;
+    try {
+      return _profiles.length - 1;
+    } catch (ex) {
+      return 0;
+    }
   }
 
   static selectLoggedIn(int index) {

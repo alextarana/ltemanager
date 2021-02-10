@@ -36,7 +36,7 @@ class RouterAPI {
     String username,
   }) async {
     if (_sessionCookie.isEmpty || _requestToken.isEmpty) {
-      _profile = new Profile(
+      _profile = Profile(
         ip: ip,
         name: name,
         password: password,

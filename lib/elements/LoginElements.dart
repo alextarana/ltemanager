@@ -358,9 +358,15 @@ class _LoginElementsState extends State<LoginElements> {
                         password: password,
                       );
 
+                      print(profile);
+
                       bool isLogged = await RouterAPI.login(profile)
                           .then((value) => value)
-                          .catchError((onError) {});
+                          .catchError((onError) {
+                        return false;
+                      });
+
+                      print(isLogged);
 
                       if (isLogged) {
                         var index = ProfileRouter.addProfile(profile);

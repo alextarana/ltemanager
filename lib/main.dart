@@ -20,7 +20,6 @@ import 'package:ltemanager2/utilities/SharedPreferencesFunctions.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
   runApp(
     EasyLocalization(
       supportedLocales: [Locale('en', 'US'), Locale('it', 'IT')],
@@ -222,6 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
           showMyDialog(context);
           isLoginPopupOpened = true;
         }
+        return false;
       });
 
       if (loginState) {
