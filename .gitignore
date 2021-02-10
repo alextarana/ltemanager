@@ -23,6 +23,7 @@ android/
 ios/
 web/
 .flutter*
+.packages*
 
 # Flutter/Dart/Pub related
 **/doc/api/
