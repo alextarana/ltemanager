@@ -70,6 +70,7 @@ class _AdsModelState extends State<AdsModel> {
           type: NativeAdmobType.banner,
           adUnitID: AdsModel.adUnitID,
           controller: _nativeAdController,
+          numberAds: 5,
           loading: Container(),
         ),
       ),
