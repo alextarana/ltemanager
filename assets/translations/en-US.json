@@ -48,5 +48,7 @@
     "defaultSelectedProfile": "Select a configuration",
     "bands-cancel":"Click outside this box to cancel.",
     "bands-loading":"Setting the bands...",
-    "bands-loading-error":"Error. Try later!"
+    "bands-loading-error":"Error. Try later!",
+    "settings":"SETTINGS",
+    "SIGN_IN": "SIGN IN"
 }

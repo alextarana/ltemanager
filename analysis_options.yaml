@@ -1,0 +1,9 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+  exclude:
+    - lib/old/**.dart

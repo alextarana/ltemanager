@@ -25,6 +25,7 @@ web/
 .flutter*
 .packages*
 
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
@@ -34,7 +35,8 @@ web/
 .packages
 .pub-cache/
 .pub/
-/build/
+/build*/
+/gradle/
 
 # Web related
 lib/generated_plugin_registrant.dart

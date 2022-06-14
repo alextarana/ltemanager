@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ltemanager2/constants/color.dart';
@@ -30,39 +31,22 @@ class _ProfileModelState extends State<ProfileModel> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  "profile".tr(),
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.quicksand(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[900],
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 child: Stack(
                   children: [
                     Align(
                       alignment: Alignment.topCenter,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          margin: EdgeInsets.all(1),
-                          child: Text(
-                            widget.name,
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.quicksand(
-                              textStyle: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[900],
-                                fontSize: 16,
-                              ),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          "profile".tr(),
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.quicksand(
+                            textStyle: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey[900],
+                              fontSize: 20,
                             ),
                           ),
                         ),
@@ -72,11 +56,11 @@ class _ProfileModelState extends State<ProfileModel> {
                       alignment: Alignment.topRight,
                       child: GestureDetector(
                         onTap: () async {
-                          print("change pressed");
+                          //print("change pressed");
                           await showMyDialog(context);
                         },
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.only(right: 8.0),
                           child: FittedBox(
                             child: Text(
                               "edit".tr(),
@@ -85,15 +69,48 @@ class _ProfileModelState extends State<ProfileModel> {
                                 textStyle: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue[900],
-                                  fontSize: 16,
+                                  fontSize: 15,
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    /*Align(
+                      alignment: Alignment.topLeft,
+                      child: GestureDetector(
+                        onTap: () async {
+                          print("settings pressed");
+                          //await showMyDialog(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Icon(
+                            FontAwesomeIcons.cog,
+                            color: Colors.blue[900],
+                          ),
+                        ),
+                      ),
+                    )*/
                   ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  margin: EdgeInsets.all(1),
+                  child: Text(
+                    widget.name,
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.quicksand(
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[900],
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

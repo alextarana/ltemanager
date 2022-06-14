@@ -48,5 +48,7 @@
     "defaultSelectedProfile": "Seleziona una configurazione",
     "bands-cancel":"Premi fuori dalla finestra per uscire",
     "bands-loading":"Configurazione bande in corso...",
-    "bands-loading-error":"Errore. Riprova!"
+    "bands-loading-error":"Errore. Riprova!",
+    "settings": "IMPOSTAZIONI",
+    "SIGN_IN": "ACCEDI"
 }
