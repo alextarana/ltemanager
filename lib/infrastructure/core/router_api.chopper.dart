@@ -18,32 +18,51 @@ class _$RouterApi extends RouterApi {
 
   @override
   Future<Response<dynamic>> requestAuthToken(Map<String, String> body) {
-    final $url = '/api/webserver/SesTokInfo';
+    final String $url = '/api/webserver/SesTokInfo';
     final $body = body;
-    final $request = Request('GET', $url, client.baseUrl, body: $body);
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
   Future<Response<dynamic>> signInWithEmailAndPassword(String body) {
-    final $url = '/api/user/login';
+    final String $url = '/api/user/login';
     final $body = body;
-    final $request = Request('POST', $url, client.baseUrl, body: $body);
+    final Request $request = Request(
+      'POST',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
   Future<Response<dynamic>> loginState() {
-    final $url = '/api/user/state-login';
-    final $request = Request('GET', $url, client.baseUrl);
+    final String $url = '/api/user/state-login';
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+    );
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
   Future<Response<dynamic>> logout(String body) {
-    final $url = '/api/user/logout';
+    final String $url = '/api/user/logout';
     final $body = body;
-    final $request = Request('GET', $url, client.baseUrl, body: $body);
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
     return client.send<dynamic, dynamic>($request);
   }
 }

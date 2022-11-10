@@ -10,6 +10,7 @@
 //
 // ignore_for_file: type=lint
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i8;
 import 'package:flutter/material.dart' as _i9;
 
@@ -29,55 +30,95 @@ class AppRouter extends _i8.RootStackRouter {
   final Map<String, _i8.PageFactory> pagesMap = {
     SplashRoute.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: _i1.SplashPage());
+        routeData: routeData,
+        child: _i1.SplashPage(),
+      );
     },
     SignInRoute.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: _i2.SignInPage());
+        routeData: routeData,
+        child: _i2.SignInPage(),
+      );
     },
     HomeRoute.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i3.HomePage());
+        routeData: routeData,
+        child: const _i3.HomePage(),
+      );
     },
     BandsRouter.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i4.BandsPage());
+        routeData: routeData,
+        child: const _i4.BandsPage(),
+      );
     },
     SpeedRouter.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i5.SpeedPage());
+        routeData: routeData,
+        child: const _i5.SpeedPage(),
+      );
     },
     StatusRouter.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i6.StatusPage());
+        routeData: routeData,
+        child: const _i6.StatusPage(),
+      );
     },
     SettingsRouter.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i7.SettingsPage());
-    }
+        routeData: routeData,
+        child: const _i7.SettingsPage(),
+      );
+    },
   };
 
   @override
   List<_i8.RouteConfig> get routes => [
-        _i8.RouteConfig(SplashRoute.name, path: '/'),
-        _i8.RouteConfig(SignInRoute.name, path: '/sign-in-page'),
-        _i8.RouteConfig(HomeRoute.name, path: '/home-page', children: [
-          _i8.RouteConfig(BandsRouter.name,
-              path: 'bands', parent: HomeRoute.name),
-          _i8.RouteConfig(SpeedRouter.name,
-              path: 'speed', parent: HomeRoute.name),
-          _i8.RouteConfig(StatusRouter.name,
-              path: 'status', parent: HomeRoute.name),
-          _i8.RouteConfig(SettingsRouter.name,
-              path: 'settings', parent: HomeRoute.name)
-        ])
+        _i8.RouteConfig(
+          SplashRoute.name,
+          path: '/',
+        ),
+        _i8.RouteConfig(
+          SignInRoute.name,
+          path: '/sign-in-page',
+        ),
+        _i8.RouteConfig(
+          HomeRoute.name,
+          path: '/home-page',
+          children: [
+            _i8.RouteConfig(
+              BandsRouter.name,
+              path: 'bands',
+              parent: HomeRoute.name,
+            ),
+            _i8.RouteConfig(
+              SpeedRouter.name,
+              path: 'speed',
+              parent: HomeRoute.name,
+            ),
+            _i8.RouteConfig(
+              StatusRouter.name,
+              path: 'status',
+              parent: HomeRoute.name,
+            ),
+            _i8.RouteConfig(
+              SettingsRouter.name,
+              path: 'settings',
+              parent: HomeRoute.name,
+            ),
+          ],
+        ),
       ];
 }
 
 /// generated route for
 /// [_i1.SplashPage]
 class SplashRoute extends _i8.PageRouteInfo<void> {
-  const SplashRoute() : super(SplashRoute.name, path: '/');
+  const SplashRoute()
+      : super(
+          SplashRoute.name,
+          path: '/',
+        );
 
   static const String name = 'SplashRoute';
 }
@@ -85,7 +126,11 @@ class SplashRoute extends _i8.PageRouteInfo<void> {
 /// generated route for
 /// [_i2.SignInPage]
 class SignInRoute extends _i8.PageRouteInfo<void> {
-  const SignInRoute() : super(SignInRoute.name, path: '/sign-in-page');
+  const SignInRoute()
+      : super(
+          SignInRoute.name,
+          path: '/sign-in-page',
+        );
 
   static const String name = 'SignInRoute';
 }
@@ -94,7 +139,11 @@ class SignInRoute extends _i8.PageRouteInfo<void> {
 /// [_i3.HomePage]
 class HomeRoute extends _i8.PageRouteInfo<void> {
   const HomeRoute({List<_i8.PageRouteInfo>? children})
-      : super(HomeRoute.name, path: '/home-page', initialChildren: children);
+      : super(
+          HomeRoute.name,
+          path: '/home-page',
+          initialChildren: children,
+        );
 
   static const String name = 'HomeRoute';
 }
@@ -102,7 +151,11 @@ class HomeRoute extends _i8.PageRouteInfo<void> {
 /// generated route for
 /// [_i4.BandsPage]
 class BandsRouter extends _i8.PageRouteInfo<void> {
-  const BandsRouter() : super(BandsRouter.name, path: 'bands');
+  const BandsRouter()
+      : super(
+          BandsRouter.name,
+          path: 'bands',
+        );
 
   static const String name = 'BandsRouter';
 }
@@ -110,7 +163,11 @@ class BandsRouter extends _i8.PageRouteInfo<void> {
 /// generated route for
 /// [_i5.SpeedPage]
 class SpeedRouter extends _i8.PageRouteInfo<void> {
-  const SpeedRouter() : super(SpeedRouter.name, path: 'speed');
+  const SpeedRouter()
+      : super(
+          SpeedRouter.name,
+          path: 'speed',
+        );
 
   static const String name = 'SpeedRouter';
 }
@@ -118,7 +175,11 @@ class SpeedRouter extends _i8.PageRouteInfo<void> {
 /// generated route for
 /// [_i6.StatusPage]
 class StatusRouter extends _i8.PageRouteInfo<void> {
-  const StatusRouter() : super(StatusRouter.name, path: 'status');
+  const StatusRouter()
+      : super(
+          StatusRouter.name,
+          path: 'status',
+        );
 
   static const String name = 'StatusRouter';
 }
@@ -126,7 +187,11 @@ class StatusRouter extends _i8.PageRouteInfo<void> {
 /// generated route for
 /// [_i7.SettingsPage]
 class SettingsRouter extends _i8.PageRouteInfo<void> {
-  const SettingsRouter() : super(SettingsRouter.name, path: 'settings');
+  const SettingsRouter()
+      : super(
+          SettingsRouter.name,
+          path: 'settings',
+        );
 
   static const String name = 'SettingsRouter';
 }

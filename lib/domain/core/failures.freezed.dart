@@ -12,92 +12,11 @@ part of 'failures.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ValueFailureTearOff {
-  const _$ValueFailureTearOff();
-
-  IPAddressMustStartWithProtocol<T> iPAddressMustStartWithProtocol<T>(
-      {required T failedValue}) {
-    return IPAddressMustStartWithProtocol<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidIPAddress<T> invalidIPAddress<T>({required T failedValue}) {
-    return InvalidIPAddress<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  ExceedingLength<T> exceedingLength<T>(
-      {required T failedValue, required int max}) {
-    return ExceedingLength<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  Empty<T> empty<T>({required T failedValue}) {
-    return Empty<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  Multiline<T> multiline<T>({required T failedValue}) {
-    return Multiline<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  NumberTooLarge<T> numberTooLarge<T>(
-      {required T failedValue, required num max}) {
-    return NumberTooLarge<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  ListTooLong<T> listTooLong<T>({required T failedValue, required int max}) {
-    return ListTooLong<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  InvalidEmail<T> invalidEmail<T>({required T failedValue}) {
-    return InvalidEmail<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  ShortPassword<T> shortPassword<T>({required T failedValue}) {
-    return ShortPassword<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidPhotoUrl<T> invalidPhotoUrl<T>({required T failedValue}) {
-    return InvalidPhotoUrl<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidQuantity<T> invalidQuantity<T>({required T failedValue}) {
-    return InvalidQuantity<T>(
-      failedValue: failedValue,
-    );
-  }
-}
-
-/// @nodoc
-const $ValueFailure = _$ValueFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ValueFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) iPAddressMustStartWithProtocol,
@@ -115,17 +34,17 @@ mixin _$ValueFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -162,18 +81,18 @@ mixin _$ValueFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -203,62 +122,64 @@ mixin _$ValueFailure<T> {
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
-      _$ValueFailureCopyWithImpl<T, $Res>;
+      _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ValueFailureCopyWithImpl<T, $Res>
+class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
     implements $ValueFailureCopyWith<T, $Res> {
   _$ValueFailureCopyWithImpl(this._value, this._then);
 
-  final ValueFailure<T> _value;
   // ignore: unused_field
-  final $Res Function(ValueFailure<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
     return _then(_value.copyWith(
-      failedValue: failedValue == freezed
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $IPAddressMustStartWithProtocolCopyWith<T, $Res>
+abstract class _$$IPAddressMustStartWithProtocolCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $IPAddressMustStartWithProtocolCopyWith(
-          IPAddressMustStartWithProtocol<T> value,
-          $Res Function(IPAddressMustStartWithProtocol<T>) then) =
-      _$IPAddressMustStartWithProtocolCopyWithImpl<T, $Res>;
+  factory _$$IPAddressMustStartWithProtocolCopyWith(
+          _$IPAddressMustStartWithProtocol<T> value,
+          $Res Function(_$IPAddressMustStartWithProtocol<T>) then) =
+      __$$IPAddressMustStartWithProtocolCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$IPAddressMustStartWithProtocolCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $IPAddressMustStartWithProtocolCopyWith<T, $Res> {
-  _$IPAddressMustStartWithProtocolCopyWithImpl(
-      IPAddressMustStartWithProtocol<T> _value,
-      $Res Function(IPAddressMustStartWithProtocol<T>) _then)
-      : super(_value, (v) => _then(v as IPAddressMustStartWithProtocol<T>));
+class __$$IPAddressMustStartWithProtocolCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res,
+        _$IPAddressMustStartWithProtocol<T>>
+    implements _$$IPAddressMustStartWithProtocolCopyWith<T, $Res> {
+  __$$IPAddressMustStartWithProtocolCopyWithImpl(
+      _$IPAddressMustStartWithProtocol<T> _value,
+      $Res Function(_$IPAddressMustStartWithProtocol<T>) _then)
+      : super(_value, _then);
 
-  @override
-  IPAddressMustStartWithProtocol<T> get _value =>
-      super._value as IPAddressMustStartWithProtocol<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(IPAddressMustStartWithProtocol<T>(
-      failedValue: failedValue == freezed
+    return _then(_$IPAddressMustStartWithProtocol<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -284,7 +205,7 @@ class _$IPAddressMustStartWithProtocol<T>
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is IPAddressMustStartWithProtocol<T> &&
+            other is _$IPAddressMustStartWithProtocol<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -295,9 +216,11 @@ class _$IPAddressMustStartWithProtocol<T>
 
   @JsonKey(ignore: true)
   @override
-  $IPAddressMustStartWithProtocolCopyWith<T, IPAddressMustStartWithProtocol<T>>
-      get copyWith => _$IPAddressMustStartWithProtocolCopyWithImpl<T,
-          IPAddressMustStartWithProtocol<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$IPAddressMustStartWithProtocolCopyWith<T,
+          _$IPAddressMustStartWithProtocol<T>>
+      get copyWith => __$$IPAddressMustStartWithProtocolCopyWithImpl<T,
+          _$IPAddressMustStartWithProtocol<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -320,17 +243,17 @@ class _$IPAddressMustStartWithProtocol<T>
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return iPAddressMustStartWithProtocol?.call(failedValue);
   }
@@ -379,18 +302,18 @@ class _$IPAddressMustStartWithProtocol<T>
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return iPAddressMustStartWithProtocol?.call(this);
   }
@@ -420,44 +343,44 @@ class _$IPAddressMustStartWithProtocol<T>
 }
 
 abstract class IPAddressMustStartWithProtocol<T> implements ValueFailure<T> {
-  const factory IPAddressMustStartWithProtocol({required T failedValue}) =
+  const factory IPAddressMustStartWithProtocol({required final T failedValue}) =
       _$IPAddressMustStartWithProtocol<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $IPAddressMustStartWithProtocolCopyWith<T, IPAddressMustStartWithProtocol<T>>
+  _$$IPAddressMustStartWithProtocolCopyWith<T,
+          _$IPAddressMustStartWithProtocol<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidIPAddressCopyWith<T, $Res>
+abstract class _$$InvalidIPAddressCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidIPAddressCopyWith(
-          InvalidIPAddress<T> value, $Res Function(InvalidIPAddress<T>) then) =
-      _$InvalidIPAddressCopyWithImpl<T, $Res>;
+  factory _$$InvalidIPAddressCopyWith(_$InvalidIPAddress<T> value,
+          $Res Function(_$InvalidIPAddress<T>) then) =
+      __$$InvalidIPAddressCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidIPAddressCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidIPAddressCopyWith<T, $Res> {
-  _$InvalidIPAddressCopyWithImpl(
-      InvalidIPAddress<T> _value, $Res Function(InvalidIPAddress<T>) _then)
-      : super(_value, (v) => _then(v as InvalidIPAddress<T>));
+class __$$InvalidIPAddressCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidIPAddress<T>>
+    implements _$$InvalidIPAddressCopyWith<T, $Res> {
+  __$$InvalidIPAddressCopyWithImpl(
+      _$InvalidIPAddress<T> _value, $Res Function(_$InvalidIPAddress<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidIPAddress<T> get _value => super._value as InvalidIPAddress<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(InvalidIPAddress<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidIPAddress<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -482,7 +405,7 @@ class _$InvalidIPAddress<T> implements InvalidIPAddress<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidIPAddress<T> &&
+            other is _$InvalidIPAddress<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -493,8 +416,10 @@ class _$InvalidIPAddress<T> implements InvalidIPAddress<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidIPAddressCopyWith<T, InvalidIPAddress<T>> get copyWith =>
-      _$InvalidIPAddressCopyWithImpl<T, InvalidIPAddress<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidIPAddressCopyWith<T, _$InvalidIPAddress<T>> get copyWith =>
+      __$$InvalidIPAddressCopyWithImpl<T, _$InvalidIPAddress<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -517,17 +442,17 @@ class _$InvalidIPAddress<T> implements InvalidIPAddress<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return invalidIPAddress?.call(failedValue);
   }
@@ -576,18 +501,18 @@ class _$InvalidIPAddress<T> implements InvalidIPAddress<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return invalidIPAddress?.call(this);
   }
@@ -617,49 +542,48 @@ class _$InvalidIPAddress<T> implements InvalidIPAddress<T> {
 }
 
 abstract class InvalidIPAddress<T> implements ValueFailure<T> {
-  const factory InvalidIPAddress({required T failedValue}) =
+  const factory InvalidIPAddress({required final T failedValue}) =
       _$InvalidIPAddress<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $InvalidIPAddressCopyWith<T, InvalidIPAddress<T>> get copyWith =>
+  _$$InvalidIPAddressCopyWith<T, _$InvalidIPAddress<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ExceedingLengthCopyWith<T, $Res>
+abstract class _$$ExceedingLengthCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ExceedingLengthCopyWith(
-          ExceedingLength<T> value, $Res Function(ExceedingLength<T>) then) =
-      _$ExceedingLengthCopyWithImpl<T, $Res>;
+  factory _$$ExceedingLengthCopyWith(_$ExceedingLength<T> value,
+          $Res Function(_$ExceedingLength<T>) then) =
+      __$$ExceedingLengthCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ExceedingLengthCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ExceedingLengthCopyWith<T, $Res> {
-  _$ExceedingLengthCopyWithImpl(
-      ExceedingLength<T> _value, $Res Function(ExceedingLength<T>) _then)
-      : super(_value, (v) => _then(v as ExceedingLength<T>));
+class __$$ExceedingLengthCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ExceedingLength<T>>
+    implements _$$ExceedingLengthCopyWith<T, $Res> {
+  __$$ExceedingLengthCopyWithImpl(
+      _$ExceedingLength<T> _value, $Res Function(_$ExceedingLength<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ExceedingLength<T> get _value => super._value as ExceedingLength<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
-    Object? max = freezed,
+    Object? failedValue = null,
+    Object? max = null,
   }) {
-    return _then(ExceedingLength<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ExceedingLength<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as int,
@@ -686,22 +610,22 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ExceedingLength<T> &&
+            other is _$ExceedingLength<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.max, max));
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(max));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
 
   @JsonKey(ignore: true)
   @override
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
-      _$ExceedingLengthCopyWithImpl<T, ExceedingLength<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
+      __$$ExceedingLengthCopyWithImpl<T, _$ExceedingLength<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -724,17 +648,17 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return exceedingLength?.call(failedValue, max);
   }
@@ -783,18 +707,18 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return exceedingLength?.call(this);
   }
@@ -824,42 +748,43 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
 }
 
 abstract class ExceedingLength<T> implements ValueFailure<T> {
-  const factory ExceedingLength({required T failedValue, required int max}) =
-      _$ExceedingLength<T>;
+  const factory ExceedingLength(
+      {required final T failedValue,
+      required final int max}) = _$ExceedingLength<T>;
 
   @override
   T get failedValue;
   int get max;
   @override
   @JsonKey(ignore: true)
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmptyCopyWith<T, $Res>
+abstract class _$$EmptyCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $EmptyCopyWith(Empty<T> value, $Res Function(Empty<T>) then) =
-      _$EmptyCopyWithImpl<T, $Res>;
+  factory _$$EmptyCopyWith(_$Empty<T> value, $Res Function(_$Empty<T>) then) =
+      __$$EmptyCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $EmptyCopyWith<T, $Res> {
-  _$EmptyCopyWithImpl(Empty<T> _value, $Res Function(Empty<T>) _then)
-      : super(_value, (v) => _then(v as Empty<T>));
+class __$$EmptyCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$Empty<T>>
+    implements _$$EmptyCopyWith<T, $Res> {
+  __$$EmptyCopyWithImpl(_$Empty<T> _value, $Res Function(_$Empty<T>) _then)
+      : super(_value, _then);
 
-  @override
-  Empty<T> get _value => super._value as Empty<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(Empty<T>(
-      failedValue: failedValue == freezed
+    return _then(_$Empty<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -884,7 +809,7 @@ class _$Empty<T> implements Empty<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Empty<T> &&
+            other is _$Empty<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -895,8 +820,9 @@ class _$Empty<T> implements Empty<T> {
 
   @JsonKey(ignore: true)
   @override
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
-      _$EmptyCopyWithImpl<T, Empty<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
+      __$$EmptyCopyWithImpl<T, _$Empty<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -919,17 +845,17 @@ class _$Empty<T> implements Empty<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return empty?.call(failedValue);
   }
@@ -978,18 +904,18 @@ class _$Empty<T> implements Empty<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return empty?.call(this);
   }
@@ -1019,43 +945,42 @@ class _$Empty<T> implements Empty<T> {
 }
 
 abstract class Empty<T> implements ValueFailure<T> {
-  const factory Empty({required T failedValue}) = _$Empty<T>;
+  const factory Empty({required final T failedValue}) = _$Empty<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MultilineCopyWith<T, $Res>
+abstract class _$$MultilineCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $MultilineCopyWith(
-          Multiline<T> value, $Res Function(Multiline<T>) then) =
-      _$MultilineCopyWithImpl<T, $Res>;
+  factory _$$MultilineCopyWith(
+          _$Multiline<T> value, $Res Function(_$Multiline<T>) then) =
+      __$$MultilineCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$MultilineCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $MultilineCopyWith<T, $Res> {
-  _$MultilineCopyWithImpl(
-      Multiline<T> _value, $Res Function(Multiline<T>) _then)
-      : super(_value, (v) => _then(v as Multiline<T>));
+class __$$MultilineCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$Multiline<T>>
+    implements _$$MultilineCopyWith<T, $Res> {
+  __$$MultilineCopyWithImpl(
+      _$Multiline<T> _value, $Res Function(_$Multiline<T>) _then)
+      : super(_value, _then);
 
-  @override
-  Multiline<T> get _value => super._value as Multiline<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(Multiline<T>(
-      failedValue: failedValue == freezed
+    return _then(_$Multiline<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1080,7 +1005,7 @@ class _$Multiline<T> implements Multiline<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Multiline<T> &&
+            other is _$Multiline<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1091,8 +1016,9 @@ class _$Multiline<T> implements Multiline<T> {
 
   @JsonKey(ignore: true)
   @override
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
-      _$MultilineCopyWithImpl<T, Multiline<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
+      __$$MultilineCopyWithImpl<T, _$Multiline<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1115,17 +1041,17 @@ class _$Multiline<T> implements Multiline<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return multiline?.call(failedValue);
   }
@@ -1174,18 +1100,18 @@ class _$Multiline<T> implements Multiline<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return multiline?.call(this);
   }
@@ -1215,48 +1141,47 @@ class _$Multiline<T> implements Multiline<T> {
 }
 
 abstract class Multiline<T> implements ValueFailure<T> {
-  const factory Multiline({required T failedValue}) = _$Multiline<T>;
+  const factory Multiline({required final T failedValue}) = _$Multiline<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NumberTooLargeCopyWith<T, $Res>
+abstract class _$$NumberTooLargeCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $NumberTooLargeCopyWith(
-          NumberTooLarge<T> value, $Res Function(NumberTooLarge<T>) then) =
-      _$NumberTooLargeCopyWithImpl<T, $Res>;
+  factory _$$NumberTooLargeCopyWith(
+          _$NumberTooLarge<T> value, $Res Function(_$NumberTooLarge<T>) then) =
+      __$$NumberTooLargeCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue, num max});
 }
 
 /// @nodoc
-class _$NumberTooLargeCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NumberTooLargeCopyWith<T, $Res> {
-  _$NumberTooLargeCopyWithImpl(
-      NumberTooLarge<T> _value, $Res Function(NumberTooLarge<T>) _then)
-      : super(_value, (v) => _then(v as NumberTooLarge<T>));
+class __$$NumberTooLargeCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$NumberTooLarge<T>>
+    implements _$$NumberTooLargeCopyWith<T, $Res> {
+  __$$NumberTooLargeCopyWithImpl(
+      _$NumberTooLarge<T> _value, $Res Function(_$NumberTooLarge<T>) _then)
+      : super(_value, _then);
 
-  @override
-  NumberTooLarge<T> get _value => super._value as NumberTooLarge<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
-    Object? max = freezed,
+    Object? failedValue = null,
+    Object? max = null,
   }) {
-    return _then(NumberTooLarge<T>(
-      failedValue: failedValue == freezed
+    return _then(_$NumberTooLarge<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as num,
@@ -1283,22 +1208,21 @@ class _$NumberTooLarge<T> implements NumberTooLarge<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is NumberTooLarge<T> &&
+            other is _$NumberTooLarge<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.max, max));
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(max));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
 
   @JsonKey(ignore: true)
   @override
-  $NumberTooLargeCopyWith<T, NumberTooLarge<T>> get copyWith =>
-      _$NumberTooLargeCopyWithImpl<T, NumberTooLarge<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$NumberTooLargeCopyWith<T, _$NumberTooLarge<T>> get copyWith =>
+      __$$NumberTooLargeCopyWithImpl<T, _$NumberTooLarge<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1321,17 +1245,17 @@ class _$NumberTooLarge<T> implements NumberTooLarge<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return numberTooLarge?.call(failedValue, max);
   }
@@ -1380,18 +1304,18 @@ class _$NumberTooLarge<T> implements NumberTooLarge<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return numberTooLarge?.call(this);
   }
@@ -1421,50 +1345,50 @@ class _$NumberTooLarge<T> implements NumberTooLarge<T> {
 }
 
 abstract class NumberTooLarge<T> implements ValueFailure<T> {
-  const factory NumberTooLarge({required T failedValue, required num max}) =
-      _$NumberTooLarge<T>;
+  const factory NumberTooLarge(
+      {required final T failedValue,
+      required final num max}) = _$NumberTooLarge<T>;
 
   @override
   T get failedValue;
   num get max;
   @override
   @JsonKey(ignore: true)
-  $NumberTooLargeCopyWith<T, NumberTooLarge<T>> get copyWith =>
+  _$$NumberTooLargeCopyWith<T, _$NumberTooLarge<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListTooLongCopyWith<T, $Res>
+abstract class _$$ListTooLongCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ListTooLongCopyWith(
-          ListTooLong<T> value, $Res Function(ListTooLong<T>) then) =
-      _$ListTooLongCopyWithImpl<T, $Res>;
+  factory _$$ListTooLongCopyWith(
+          _$ListTooLong<T> value, $Res Function(_$ListTooLong<T>) then) =
+      __$$ListTooLongCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ListTooLongCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ListTooLongCopyWith<T, $Res> {
-  _$ListTooLongCopyWithImpl(
-      ListTooLong<T> _value, $Res Function(ListTooLong<T>) _then)
-      : super(_value, (v) => _then(v as ListTooLong<T>));
+class __$$ListTooLongCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ListTooLong<T>>
+    implements _$$ListTooLongCopyWith<T, $Res> {
+  __$$ListTooLongCopyWithImpl(
+      _$ListTooLong<T> _value, $Res Function(_$ListTooLong<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ListTooLong<T> get _value => super._value as ListTooLong<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
-    Object? max = freezed,
+    Object? failedValue = null,
+    Object? max = null,
   }) {
-    return _then(ListTooLong<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ListTooLong<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1491,22 +1415,21 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ListTooLong<T> &&
+            other is _$ListTooLong<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.max, max));
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(max));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
 
   @JsonKey(ignore: true)
   @override
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
-      _$ListTooLongCopyWithImpl<T, ListTooLong<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
+      __$$ListTooLongCopyWithImpl<T, _$ListTooLong<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1529,17 +1452,17 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return listTooLong?.call(failedValue, max);
   }
@@ -1588,18 +1511,18 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return listTooLong?.call(this);
   }
@@ -1629,45 +1552,45 @@ class _$ListTooLong<T> implements ListTooLong<T> {
 }
 
 abstract class ListTooLong<T> implements ValueFailure<T> {
-  const factory ListTooLong({required T failedValue, required int max}) =
-      _$ListTooLong<T>;
+  const factory ListTooLong(
+      {required final T failedValue,
+      required final int max}) = _$ListTooLong<T>;
 
   @override
   T get failedValue;
   int get max;
   @override
   @JsonKey(ignore: true)
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidEmailCopyWith<T, $Res>
+abstract class _$$InvalidEmailCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidEmailCopyWith(
-          InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
-      _$InvalidEmailCopyWithImpl<T, $Res>;
+  factory _$$InvalidEmailCopyWith(
+          _$InvalidEmail<T> value, $Res Function(_$InvalidEmail<T>) then) =
+      __$$InvalidEmailCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidEmailCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidEmailCopyWith<T, $Res> {
-  _$InvalidEmailCopyWithImpl(
-      InvalidEmail<T> _value, $Res Function(InvalidEmail<T>) _then)
-      : super(_value, (v) => _then(v as InvalidEmail<T>));
+class __$$InvalidEmailCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidEmail<T>>
+    implements _$$InvalidEmailCopyWith<T, $Res> {
+  __$$InvalidEmailCopyWithImpl(
+      _$InvalidEmail<T> _value, $Res Function(_$InvalidEmail<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidEmail<T> get _value => super._value as InvalidEmail<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(InvalidEmail<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidEmail<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1692,7 +1615,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidEmail<T> &&
+            other is _$InvalidEmail<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1703,8 +1626,9 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
-      _$InvalidEmailCopyWithImpl<T, InvalidEmail<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
+      __$$InvalidEmailCopyWithImpl<T, _$InvalidEmail<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1727,17 +1651,17 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return invalidEmail?.call(failedValue);
   }
@@ -1786,18 +1710,18 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1827,43 +1751,43 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 }
 
 abstract class InvalidEmail<T> implements ValueFailure<T> {
-  const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
+  const factory InvalidEmail({required final T failedValue}) =
+      _$InvalidEmail<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShortPasswordCopyWith<T, $Res>
+abstract class _$$ShortPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ShortPasswordCopyWith(
-          ShortPassword<T> value, $Res Function(ShortPassword<T>) then) =
-      _$ShortPasswordCopyWithImpl<T, $Res>;
+  factory _$$ShortPasswordCopyWith(
+          _$ShortPassword<T> value, $Res Function(_$ShortPassword<T>) then) =
+      __$$ShortPasswordCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ShortPasswordCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ShortPasswordCopyWith<T, $Res> {
-  _$ShortPasswordCopyWithImpl(
-      ShortPassword<T> _value, $Res Function(ShortPassword<T>) _then)
-      : super(_value, (v) => _then(v as ShortPassword<T>));
+class __$$ShortPasswordCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ShortPassword<T>>
+    implements _$$ShortPasswordCopyWith<T, $Res> {
+  __$$ShortPasswordCopyWithImpl(
+      _$ShortPassword<T> _value, $Res Function(_$ShortPassword<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ShortPassword<T> get _value => super._value as ShortPassword<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(ShortPassword<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ShortPassword<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1888,7 +1812,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ShortPassword<T> &&
+            other is _$ShortPassword<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1899,8 +1823,9 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
-      _$ShortPasswordCopyWithImpl<T, ShortPassword<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
+      __$$ShortPasswordCopyWithImpl<T, _$ShortPassword<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1923,17 +1848,17 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return shortPassword?.call(failedValue);
   }
@@ -1982,18 +1907,18 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return shortPassword?.call(this);
   }
@@ -2023,43 +1948,43 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 }
 
 abstract class ShortPassword<T> implements ValueFailure<T> {
-  const factory ShortPassword({required T failedValue}) = _$ShortPassword<T>;
+  const factory ShortPassword({required final T failedValue}) =
+      _$ShortPassword<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
+  _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidPhotoUrlCopyWith<T, $Res>
+abstract class _$$InvalidPhotoUrlCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidPhotoUrlCopyWith(
-          InvalidPhotoUrl<T> value, $Res Function(InvalidPhotoUrl<T>) then) =
-      _$InvalidPhotoUrlCopyWithImpl<T, $Res>;
+  factory _$$InvalidPhotoUrlCopyWith(_$InvalidPhotoUrl<T> value,
+          $Res Function(_$InvalidPhotoUrl<T>) then) =
+      __$$InvalidPhotoUrlCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidPhotoUrlCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidPhotoUrlCopyWith<T, $Res> {
-  _$InvalidPhotoUrlCopyWithImpl(
-      InvalidPhotoUrl<T> _value, $Res Function(InvalidPhotoUrl<T>) _then)
-      : super(_value, (v) => _then(v as InvalidPhotoUrl<T>));
+class __$$InvalidPhotoUrlCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidPhotoUrl<T>>
+    implements _$$InvalidPhotoUrlCopyWith<T, $Res> {
+  __$$InvalidPhotoUrlCopyWithImpl(
+      _$InvalidPhotoUrl<T> _value, $Res Function(_$InvalidPhotoUrl<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidPhotoUrl<T> get _value => super._value as InvalidPhotoUrl<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(InvalidPhotoUrl<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidPhotoUrl<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -2084,7 +2009,7 @@ class _$InvalidPhotoUrl<T> implements InvalidPhotoUrl<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidPhotoUrl<T> &&
+            other is _$InvalidPhotoUrl<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -2095,8 +2020,10 @@ class _$InvalidPhotoUrl<T> implements InvalidPhotoUrl<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidPhotoUrlCopyWith<T, InvalidPhotoUrl<T>> get copyWith =>
-      _$InvalidPhotoUrlCopyWithImpl<T, InvalidPhotoUrl<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidPhotoUrlCopyWith<T, _$InvalidPhotoUrl<T>> get copyWith =>
+      __$$InvalidPhotoUrlCopyWithImpl<T, _$InvalidPhotoUrl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2119,17 +2046,17 @@ class _$InvalidPhotoUrl<T> implements InvalidPhotoUrl<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return invalidPhotoUrl?.call(failedValue);
   }
@@ -2178,18 +2105,18 @@ class _$InvalidPhotoUrl<T> implements InvalidPhotoUrl<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return invalidPhotoUrl?.call(this);
   }
@@ -2219,44 +2146,43 @@ class _$InvalidPhotoUrl<T> implements InvalidPhotoUrl<T> {
 }
 
 abstract class InvalidPhotoUrl<T> implements ValueFailure<T> {
-  const factory InvalidPhotoUrl({required T failedValue}) =
+  const factory InvalidPhotoUrl({required final T failedValue}) =
       _$InvalidPhotoUrl<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $InvalidPhotoUrlCopyWith<T, InvalidPhotoUrl<T>> get copyWith =>
+  _$$InvalidPhotoUrlCopyWith<T, _$InvalidPhotoUrl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidQuantityCopyWith<T, $Res>
+abstract class _$$InvalidQuantityCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidQuantityCopyWith(
-          InvalidQuantity<T> value, $Res Function(InvalidQuantity<T>) then) =
-      _$InvalidQuantityCopyWithImpl<T, $Res>;
+  factory _$$InvalidQuantityCopyWith(_$InvalidQuantity<T> value,
+          $Res Function(_$InvalidQuantity<T>) then) =
+      __$$InvalidQuantityCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidQuantityCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidQuantityCopyWith<T, $Res> {
-  _$InvalidQuantityCopyWithImpl(
-      InvalidQuantity<T> _value, $Res Function(InvalidQuantity<T>) _then)
-      : super(_value, (v) => _then(v as InvalidQuantity<T>));
+class __$$InvalidQuantityCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidQuantity<T>>
+    implements _$$InvalidQuantityCopyWith<T, $Res> {
+  __$$InvalidQuantityCopyWithImpl(
+      _$InvalidQuantity<T> _value, $Res Function(_$InvalidQuantity<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidQuantity<T> get _value => super._value as InvalidQuantity<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
+    Object? failedValue = null,
   }) {
-    return _then(InvalidQuantity<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidQuantity<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -2281,7 +2207,7 @@ class _$InvalidQuantity<T> implements InvalidQuantity<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidQuantity<T> &&
+            other is _$InvalidQuantity<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -2292,8 +2218,10 @@ class _$InvalidQuantity<T> implements InvalidQuantity<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidQuantityCopyWith<T, InvalidQuantity<T>> get copyWith =>
-      _$InvalidQuantityCopyWithImpl<T, InvalidQuantity<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidQuantityCopyWith<T, _$InvalidQuantity<T>> get copyWith =>
+      __$$InvalidQuantityCopyWithImpl<T, _$InvalidQuantity<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2316,17 +2244,17 @@ class _$InvalidQuantity<T> implements InvalidQuantity<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue)? iPAddressMustStartWithProtocol,
-    TResult Function(T failedValue)? invalidIPAddress,
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, num max)? numberTooLarge,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
-    TResult Function(T failedValue)? invalidPhotoUrl,
-    TResult Function(T failedValue)? invalidQuantity,
+    TResult? Function(T failedValue)? iPAddressMustStartWithProtocol,
+    TResult? Function(T failedValue)? invalidIPAddress,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, num max)? numberTooLarge,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? invalidPhotoUrl,
+    TResult? Function(T failedValue)? invalidQuantity,
   }) {
     return invalidQuantity?.call(failedValue);
   }
@@ -2375,18 +2303,18 @@ class _$InvalidQuantity<T> implements InvalidQuantity<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(IPAddressMustStartWithProtocol<T> value)?
+    TResult? Function(IPAddressMustStartWithProtocol<T> value)?
         iPAddressMustStartWithProtocol,
-    TResult Function(InvalidIPAddress<T> value)? invalidIPAddress,
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(NumberTooLarge<T> value)? numberTooLarge,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
-    TResult Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
-    TResult Function(InvalidQuantity<T> value)? invalidQuantity,
+    TResult? Function(InvalidIPAddress<T> value)? invalidIPAddress,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(NumberTooLarge<T> value)? numberTooLarge,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidPhotoUrl<T> value)? invalidPhotoUrl,
+    TResult? Function(InvalidQuantity<T> value)? invalidQuantity,
   }) {
     return invalidQuantity?.call(this);
   }
@@ -2416,13 +2344,13 @@ class _$InvalidQuantity<T> implements InvalidQuantity<T> {
 }
 
 abstract class InvalidQuantity<T> implements ValueFailure<T> {
-  const factory InvalidQuantity({required T failedValue}) =
+  const factory InvalidQuantity({required final T failedValue}) =
       _$InvalidQuantity<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  $InvalidQuantityCopyWith<T, InvalidQuantity<T>> get copyWith =>
+  _$$InvalidQuantityCopyWith<T, _$InvalidQuantity<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

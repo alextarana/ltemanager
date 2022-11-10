@@ -12,51 +12,7 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthFailureTearOff {
-  const _$AuthFailureTearOff();
-
-  RequestLogoutFailed requestLogoutFailes() {
-    return const RequestLogoutFailed();
-  }
-
-  NotAuthenticated notAuthenticated() {
-    return const NotAuthenticated();
-  }
-
-  CancelledByUser cancelledByUser() {
-    return const CancelledByUser();
-  }
-
-  ServerError serverError() {
-    return const ServerError();
-  }
-
-  EmailAlreadyInUse emailAlreadyInUse() {
-    return const EmailAlreadyInUse();
-  }
-
-  InvalidEmailAndPasswordCombination invalidEmailAndPasswordCombination() {
-    return const InvalidEmailAndPasswordCombination();
-  }
-
-  FunctionalityNotImplemented notImplemented() {
-    return const FunctionalityNotImplemented();
-  }
-
-  SnonceError snonceError() {
-    return const SnonceError();
-  }
-
-  CannotSetBaseUrl cannotSetBaseUrl() {
-    return const CannotSetBaseUrl();
-  }
-}
-
-/// @nodoc
-const $AuthFailure = _$AuthFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthFailure {
@@ -75,15 +31,15 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -116,16 +72,16 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -149,35 +105,34 @@ mixin _$AuthFailure {
 abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+      _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
+    implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
-  final AuthFailure _value;
   // ignore: unused_field
-  final $Res Function(AuthFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $RequestLogoutFailedCopyWith<$Res> {
-  factory $RequestLogoutFailedCopyWith(
-          RequestLogoutFailed value, $Res Function(RequestLogoutFailed) then) =
-      _$RequestLogoutFailedCopyWithImpl<$Res>;
+abstract class _$$RequestLogoutFailedCopyWith<$Res> {
+  factory _$$RequestLogoutFailedCopyWith(_$RequestLogoutFailed value,
+          $Res Function(_$RequestLogoutFailed) then) =
+      __$$RequestLogoutFailedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RequestLogoutFailedCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $RequestLogoutFailedCopyWith<$Res> {
-  _$RequestLogoutFailedCopyWithImpl(
-      RequestLogoutFailed _value, $Res Function(RequestLogoutFailed) _then)
-      : super(_value, (v) => _then(v as RequestLogoutFailed));
-
-  @override
-  RequestLogoutFailed get _value => super._value as RequestLogoutFailed;
+class __$$RequestLogoutFailedCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$RequestLogoutFailed>
+    implements _$$RequestLogoutFailedCopyWith<$Res> {
+  __$$RequestLogoutFailedCopyWithImpl(
+      _$RequestLogoutFailed _value, $Res Function(_$RequestLogoutFailed) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -193,7 +148,7 @@ class _$RequestLogoutFailed implements RequestLogoutFailed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RequestLogoutFailed);
+        (other.runtimeType == runtimeType && other is _$RequestLogoutFailed);
   }
 
   @override
@@ -218,15 +173,15 @@ class _$RequestLogoutFailed implements RequestLogoutFailed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return requestLogoutFailes?.call();
   }
@@ -271,16 +226,16 @@ class _$RequestLogoutFailed implements RequestLogoutFailed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return requestLogoutFailes?.call(this);
   }
@@ -312,22 +267,19 @@ abstract class RequestLogoutFailed implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $NotAuthenticatedCopyWith<$Res> {
-  factory $NotAuthenticatedCopyWith(
-          NotAuthenticated value, $Res Function(NotAuthenticated) then) =
-      _$NotAuthenticatedCopyWithImpl<$Res>;
+abstract class _$$NotAuthenticatedCopyWith<$Res> {
+  factory _$$NotAuthenticatedCopyWith(
+          _$NotAuthenticated value, $Res Function(_$NotAuthenticated) then) =
+      __$$NotAuthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$NotAuthenticatedCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $NotAuthenticatedCopyWith<$Res> {
-  _$NotAuthenticatedCopyWithImpl(
-      NotAuthenticated _value, $Res Function(NotAuthenticated) _then)
-      : super(_value, (v) => _then(v as NotAuthenticated));
-
-  @override
-  NotAuthenticated get _value => super._value as NotAuthenticated;
+class __$$NotAuthenticatedCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$NotAuthenticated>
+    implements _$$NotAuthenticatedCopyWith<$Res> {
+  __$$NotAuthenticatedCopyWithImpl(
+      _$NotAuthenticated _value, $Res Function(_$NotAuthenticated) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -343,7 +295,7 @@ class _$NotAuthenticated implements NotAuthenticated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is NotAuthenticated);
+        (other.runtimeType == runtimeType && other is _$NotAuthenticated);
   }
 
   @override
@@ -368,15 +320,15 @@ class _$NotAuthenticated implements NotAuthenticated {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return notAuthenticated?.call();
   }
@@ -421,16 +373,16 @@ class _$NotAuthenticated implements NotAuthenticated {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return notAuthenticated?.call(this);
   }
@@ -462,22 +414,19 @@ abstract class NotAuthenticated implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $CancelledByUserCopyWith<$Res> {
-  factory $CancelledByUserCopyWith(
-          CancelledByUser value, $Res Function(CancelledByUser) then) =
-      _$CancelledByUserCopyWithImpl<$Res>;
+abstract class _$$CancelledByUserCopyWith<$Res> {
+  factory _$$CancelledByUserCopyWith(
+          _$CancelledByUser value, $Res Function(_$CancelledByUser) then) =
+      __$$CancelledByUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CancelledByUserCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $CancelledByUserCopyWith<$Res> {
-  _$CancelledByUserCopyWithImpl(
-      CancelledByUser _value, $Res Function(CancelledByUser) _then)
-      : super(_value, (v) => _then(v as CancelledByUser));
-
-  @override
-  CancelledByUser get _value => super._value as CancelledByUser;
+class __$$CancelledByUserCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$CancelledByUser>
+    implements _$$CancelledByUserCopyWith<$Res> {
+  __$$CancelledByUserCopyWithImpl(
+      _$CancelledByUser _value, $Res Function(_$CancelledByUser) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -493,7 +442,7 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CancelledByUser);
+        (other.runtimeType == runtimeType && other is _$CancelledByUser);
   }
 
   @override
@@ -518,15 +467,15 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return cancelledByUser?.call();
   }
@@ -571,16 +520,16 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return cancelledByUser?.call(this);
   }
@@ -612,21 +561,19 @@ abstract class CancelledByUser implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $ServerErrorCopyWith<$Res> {
-  factory $ServerErrorCopyWith(
-          ServerError value, $Res Function(ServerError) then) =
-      _$ServerErrorCopyWithImpl<$Res>;
+abstract class _$$ServerErrorCopyWith<$Res> {
+  factory _$$ServerErrorCopyWith(
+          _$ServerError value, $Res Function(_$ServerError) then) =
+      __$$ServerErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements $ServerErrorCopyWith<$Res> {
-  _$ServerErrorCopyWithImpl(
-      ServerError _value, $Res Function(ServerError) _then)
-      : super(_value, (v) => _then(v as ServerError));
-
-  @override
-  ServerError get _value => super._value as ServerError;
+class __$$ServerErrorCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$ServerError>
+    implements _$$ServerErrorCopyWith<$Res> {
+  __$$ServerErrorCopyWithImpl(
+      _$ServerError _value, $Res Function(_$ServerError) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -642,7 +589,7 @@ class _$ServerError implements ServerError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ServerError);
+        (other.runtimeType == runtimeType && other is _$ServerError);
   }
 
   @override
@@ -667,15 +614,15 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return serverError?.call();
   }
@@ -720,16 +667,16 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return serverError?.call(this);
   }
@@ -761,22 +708,19 @@ abstract class ServerError implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res> {
-  factory $EmailAlreadyInUseCopyWith(
-          EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
-      _$EmailAlreadyInUseCopyWithImpl<$Res>;
+abstract class _$$EmailAlreadyInUseCopyWith<$Res> {
+  factory _$$EmailAlreadyInUseCopyWith(
+          _$EmailAlreadyInUse value, $Res Function(_$EmailAlreadyInUse) then) =
+      __$$EmailAlreadyInUseCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmailAlreadyInUseCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $EmailAlreadyInUseCopyWith<$Res> {
-  _$EmailAlreadyInUseCopyWithImpl(
-      EmailAlreadyInUse _value, $Res Function(EmailAlreadyInUse) _then)
-      : super(_value, (v) => _then(v as EmailAlreadyInUse));
-
-  @override
-  EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
+class __$$EmailAlreadyInUseCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$EmailAlreadyInUse>
+    implements _$$EmailAlreadyInUseCopyWith<$Res> {
+  __$$EmailAlreadyInUseCopyWithImpl(
+      _$EmailAlreadyInUse _value, $Res Function(_$EmailAlreadyInUse) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -792,7 +736,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is EmailAlreadyInUse);
+        (other.runtimeType == runtimeType && other is _$EmailAlreadyInUse);
   }
 
   @override
@@ -817,15 +761,15 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -870,16 +814,16 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -911,25 +855,22 @@ abstract class EmailAlreadyInUse implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $InvalidEmailAndPasswordCombinationCopyWith<$Res> {
-  factory $InvalidEmailAndPasswordCombinationCopyWith(
-          InvalidEmailAndPasswordCombination value,
-          $Res Function(InvalidEmailAndPasswordCombination) then) =
-      _$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>;
+abstract class _$$InvalidEmailAndPasswordCombinationCopyWith<$Res> {
+  factory _$$InvalidEmailAndPasswordCombinationCopyWith(
+          _$InvalidEmailAndPasswordCombination value,
+          $Res Function(_$InvalidEmailAndPasswordCombination) then) =
+      __$$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $InvalidEmailAndPasswordCombinationCopyWith<$Res> {
-  _$InvalidEmailAndPasswordCombinationCopyWithImpl(
-      InvalidEmailAndPasswordCombination _value,
-      $Res Function(InvalidEmailAndPasswordCombination) _then)
-      : super(_value, (v) => _then(v as InvalidEmailAndPasswordCombination));
-
-  @override
-  InvalidEmailAndPasswordCombination get _value =>
-      super._value as InvalidEmailAndPasswordCombination;
+class __$$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res,
+        _$InvalidEmailAndPasswordCombination>
+    implements _$$InvalidEmailAndPasswordCombinationCopyWith<$Res> {
+  __$$InvalidEmailAndPasswordCombinationCopyWithImpl(
+      _$InvalidEmailAndPasswordCombination _value,
+      $Res Function(_$InvalidEmailAndPasswordCombination) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -947,7 +888,7 @@ class _$InvalidEmailAndPasswordCombination
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidEmailAndPasswordCombination);
+            other is _$InvalidEmailAndPasswordCombination);
   }
 
   @override
@@ -972,15 +913,15 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return invalidEmailAndPasswordCombination?.call();
   }
@@ -1025,16 +966,16 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return invalidEmailAndPasswordCombination?.call(this);
   }
@@ -1067,24 +1008,21 @@ abstract class InvalidEmailAndPasswordCombination implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $FunctionalityNotImplementedCopyWith<$Res> {
-  factory $FunctionalityNotImplementedCopyWith(
-          FunctionalityNotImplemented value,
-          $Res Function(FunctionalityNotImplemented) then) =
-      _$FunctionalityNotImplementedCopyWithImpl<$Res>;
+abstract class _$$FunctionalityNotImplementedCopyWith<$Res> {
+  factory _$$FunctionalityNotImplementedCopyWith(
+          _$FunctionalityNotImplemented value,
+          $Res Function(_$FunctionalityNotImplemented) then) =
+      __$$FunctionalityNotImplementedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$FunctionalityNotImplementedCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $FunctionalityNotImplementedCopyWith<$Res> {
-  _$FunctionalityNotImplementedCopyWithImpl(FunctionalityNotImplemented _value,
-      $Res Function(FunctionalityNotImplemented) _then)
-      : super(_value, (v) => _then(v as FunctionalityNotImplemented));
-
-  @override
-  FunctionalityNotImplemented get _value =>
-      super._value as FunctionalityNotImplemented;
+class __$$FunctionalityNotImplementedCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$FunctionalityNotImplemented>
+    implements _$$FunctionalityNotImplementedCopyWith<$Res> {
+  __$$FunctionalityNotImplementedCopyWithImpl(
+      _$FunctionalityNotImplemented _value,
+      $Res Function(_$FunctionalityNotImplemented) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1101,7 +1039,7 @@ class _$FunctionalityNotImplemented implements FunctionalityNotImplemented {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is FunctionalityNotImplemented);
+            other is _$FunctionalityNotImplemented);
   }
 
   @override
@@ -1126,15 +1064,15 @@ class _$FunctionalityNotImplemented implements FunctionalityNotImplemented {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return notImplemented?.call();
   }
@@ -1179,16 +1117,16 @@ class _$FunctionalityNotImplemented implements FunctionalityNotImplemented {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return notImplemented?.call(this);
   }
@@ -1220,21 +1158,19 @@ abstract class FunctionalityNotImplemented implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $SnonceErrorCopyWith<$Res> {
-  factory $SnonceErrorCopyWith(
-          SnonceError value, $Res Function(SnonceError) then) =
-      _$SnonceErrorCopyWithImpl<$Res>;
+abstract class _$$SnonceErrorCopyWith<$Res> {
+  factory _$$SnonceErrorCopyWith(
+          _$SnonceError value, $Res Function(_$SnonceError) then) =
+      __$$SnonceErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SnonceErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements $SnonceErrorCopyWith<$Res> {
-  _$SnonceErrorCopyWithImpl(
-      SnonceError _value, $Res Function(SnonceError) _then)
-      : super(_value, (v) => _then(v as SnonceError));
-
-  @override
-  SnonceError get _value => super._value as SnonceError;
+class __$$SnonceErrorCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$SnonceError>
+    implements _$$SnonceErrorCopyWith<$Res> {
+  __$$SnonceErrorCopyWithImpl(
+      _$SnonceError _value, $Res Function(_$SnonceError) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1250,7 +1186,7 @@ class _$SnonceError implements SnonceError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SnonceError);
+        (other.runtimeType == runtimeType && other is _$SnonceError);
   }
 
   @override
@@ -1275,15 +1211,15 @@ class _$SnonceError implements SnonceError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return snonceError?.call();
   }
@@ -1328,16 +1264,16 @@ class _$SnonceError implements SnonceError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return snonceError?.call(this);
   }
@@ -1369,22 +1305,19 @@ abstract class SnonceError implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $CannotSetBaseUrlCopyWith<$Res> {
-  factory $CannotSetBaseUrlCopyWith(
-          CannotSetBaseUrl value, $Res Function(CannotSetBaseUrl) then) =
-      _$CannotSetBaseUrlCopyWithImpl<$Res>;
+abstract class _$$CannotSetBaseUrlCopyWith<$Res> {
+  factory _$$CannotSetBaseUrlCopyWith(
+          _$CannotSetBaseUrl value, $Res Function(_$CannotSetBaseUrl) then) =
+      __$$CannotSetBaseUrlCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CannotSetBaseUrlCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $CannotSetBaseUrlCopyWith<$Res> {
-  _$CannotSetBaseUrlCopyWithImpl(
-      CannotSetBaseUrl _value, $Res Function(CannotSetBaseUrl) _then)
-      : super(_value, (v) => _then(v as CannotSetBaseUrl));
-
-  @override
-  CannotSetBaseUrl get _value => super._value as CannotSetBaseUrl;
+class __$$CannotSetBaseUrlCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$CannotSetBaseUrl>
+    implements _$$CannotSetBaseUrlCopyWith<$Res> {
+  __$$CannotSetBaseUrlCopyWithImpl(
+      _$CannotSetBaseUrl _value, $Res Function(_$CannotSetBaseUrl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1400,7 +1333,7 @@ class _$CannotSetBaseUrl implements CannotSetBaseUrl {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CannotSetBaseUrl);
+        (other.runtimeType == runtimeType && other is _$CannotSetBaseUrl);
   }
 
   @override
@@ -1425,15 +1358,15 @@ class _$CannotSetBaseUrl implements CannotSetBaseUrl {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? requestLogoutFailes,
-    TResult Function()? notAuthenticated,
-    TResult Function()? cancelledByUser,
-    TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? invalidEmailAndPasswordCombination,
-    TResult Function()? notImplemented,
-    TResult Function()? snonceError,
-    TResult Function()? cannotSetBaseUrl,
+    TResult? Function()? requestLogoutFailes,
+    TResult? Function()? notAuthenticated,
+    TResult? Function()? cancelledByUser,
+    TResult? Function()? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? notImplemented,
+    TResult? Function()? snonceError,
+    TResult? Function()? cannotSetBaseUrl,
   }) {
     return cannotSetBaseUrl?.call();
   }
@@ -1478,16 +1411,16 @@ class _$CannotSetBaseUrl implements CannotSetBaseUrl {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RequestLogoutFailed value)? requestLogoutFailes,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(RequestLogoutFailed value)? requestLogoutFailes,
+    TResult? Function(NotAuthenticated value)? notAuthenticated,
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
-    TResult Function(FunctionalityNotImplemented value)? notImplemented,
-    TResult Function(SnonceError value)? snonceError,
-    TResult Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
+    TResult? Function(FunctionalityNotImplemented value)? notImplemented,
+    TResult? Function(SnonceError value)? snonceError,
+    TResult? Function(CannotSetBaseUrl value)? cannotSetBaseUrl,
   }) {
     return cannotSetBaseUrl?.call(this);
   }

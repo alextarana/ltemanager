@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:chopper/chopper.dart';
 import 'package:ltemanager2/domain/core/resource_error.dart';
 
@@ -31,18 +33,20 @@ class JsonSerializableConverter extends JsonConverter {
   }
 
   @override
-  Response<ResultType> convertResponse<ResultType, Item>(Response response) {
+  FutureOr<Response<ResultType>> convertResponse<ResultType, Item>(
+      Response response) async {
     // use [JsonConverter] to decode json
-    final jsonRes = super.convertResponse(response);
-    return jsonRes.copyWith<ResultType>(
+    final jsonRes = await super.convertResponse(response);
+    return jsonRes.copyWith(
       body: _decode<Item>(jsonRes.body) as ResultType,
     );
   }
 
   @override
-  Response convertError<ResultType, Item>(Response response) {
+  FutureOr<Response<ResourceError>> convertError<ResultType, Item>(
+      Response response) async {
     // use [JsonConverter] to decode json
-    final jsonRes = super.convertError(response);
+    final jsonRes = await super.convertError(response);
 
     return jsonRes.copyWith<ResourceError>(
       body: ResourceError.fromJsonFactory(jsonRes.body as Map<String, dynamic>),

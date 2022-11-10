@@ -11,8 +11,7 @@ class LoggerInterceptor implements RequestInterceptor, ResponseInterceptor {
   FutureOr<Request> onRequest(Request request) {
     _logger.i([
       request.method,
-      request.baseUrl,
-      request.url,
+      request.path,
       request.headers,
       request.body,
     ]);

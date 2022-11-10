@@ -12,19 +12,7 @@ part of 'status_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$StatusFailureTearOff {
-  const _$StatusFailureTearOff();
-
-  LoadingError loadingError() {
-    return const LoadingError();
-  }
-}
-
-/// @nodoc
-const $StatusFailure = _$StatusFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$StatusFailure {
@@ -35,7 +23,7 @@ mixin _$StatusFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loadingError,
+    TResult? Function()? loadingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,7 +39,7 @@ mixin _$StatusFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(LoadingError value)? loadingError,
+    TResult? Function(LoadingError value)? loadingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,35 +54,34 @@ mixin _$StatusFailure {
 abstract class $StatusFailureCopyWith<$Res> {
   factory $StatusFailureCopyWith(
           StatusFailure value, $Res Function(StatusFailure) then) =
-      _$StatusFailureCopyWithImpl<$Res>;
+      _$StatusFailureCopyWithImpl<$Res, StatusFailure>;
 }
 
 /// @nodoc
-class _$StatusFailureCopyWithImpl<$Res>
+class _$StatusFailureCopyWithImpl<$Res, $Val extends StatusFailure>
     implements $StatusFailureCopyWith<$Res> {
   _$StatusFailureCopyWithImpl(this._value, this._then);
 
-  final StatusFailure _value;
   // ignore: unused_field
-  final $Res Function(StatusFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $LoadingErrorCopyWith<$Res> {
-  factory $LoadingErrorCopyWith(
-          LoadingError value, $Res Function(LoadingError) then) =
-      _$LoadingErrorCopyWithImpl<$Res>;
+abstract class _$$LoadingErrorCopyWith<$Res> {
+  factory _$$LoadingErrorCopyWith(
+          _$LoadingError value, $Res Function(_$LoadingError) then) =
+      __$$LoadingErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingErrorCopyWithImpl<$Res> extends _$StatusFailureCopyWithImpl<$Res>
-    implements $LoadingErrorCopyWith<$Res> {
-  _$LoadingErrorCopyWithImpl(
-      LoadingError _value, $Res Function(LoadingError) _then)
-      : super(_value, (v) => _then(v as LoadingError));
-
-  @override
-  LoadingError get _value => super._value as LoadingError;
+class __$$LoadingErrorCopyWithImpl<$Res>
+    extends _$StatusFailureCopyWithImpl<$Res, _$LoadingError>
+    implements _$$LoadingErrorCopyWith<$Res> {
+  __$$LoadingErrorCopyWithImpl(
+      _$LoadingError _value, $Res Function(_$LoadingError) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -110,7 +97,7 @@ class _$LoadingError implements LoadingError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadingError);
+        (other.runtimeType == runtimeType && other is _$LoadingError);
   }
 
   @override
@@ -127,7 +114,7 @@ class _$LoadingError implements LoadingError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loadingError,
+    TResult? Function()? loadingError,
   }) {
     return loadingError?.call();
   }
@@ -155,7 +142,7 @@ class _$LoadingError implements LoadingError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(LoadingError value)? loadingError,
+    TResult? Function(LoadingError value)? loadingError,
   }) {
     return loadingError?.call(this);
   }

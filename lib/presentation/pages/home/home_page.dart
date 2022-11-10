@@ -32,81 +32,78 @@ class _HomePageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/background/background.jpeg"),
-          fit: BoxFit.cover,
+    return AutoTabsScaffold(
+      appBarBuilder: (_, tabsRouter) => AppBar(
+        leading: const AutoLeadingButton(
+          color: Colors.black,
         ),
-      ),
-      child: AutoTabsScaffold(
-        appBarBuilder: (_, tabsRouter) => AppBar(
-          leading: const AutoBackButton(),
-          actions: [
-            IconButton(
-              onPressed: () => context.read<AuthBloc>().add(
-                    const AuthEvent.signOut(),
-                  ),
-              icon: const Icon(
-                Icons.logout,
-              ),
-            )
-          ],
-          title: const Text(
-            "LTE Manager",
+        actions: [
+          IconButton(
+            onPressed: () => context.read<AuthBloc>().add(
+                  const AuthEvent.signOut(),
+                ),
+            icon: const Icon(
+              Icons.logout,
+              color: Colors.black,
+            ),
+          )
+        ],
+        title: const Text(
+          "LTE Manager",
+          style: TextStyle(
+            color: Colors.black,
           ),
         ),
-        extendBody: true,
-        extendBodyBehindAppBar: true,
-        backgroundColor: Colors.transparent,
-        routes: const [
-          StatusRouter(),
-          BandsRouter(),
-          SpeedRouter(),
-          SettingsRouter(),
-        ],
-        bottomNavigationBuilder: (_, tabsRouter) {
-          return SalomonBottomBar(
-            items: [
-              SalomonBottomBarItem(
-                icon: const Icon(
-                  Icons.network_cell,
-                  size: 30,
-                ),
-                title: const Text("Status"),
-                selectedColor: Colors.white,
-              ),
-              SalomonBottomBarItem(
-                icon: const Icon(
-                  Icons.settings_input_antenna,
-                  size: 30,
-                ),
-                title: const Text("Bands"),
-                selectedColor: Colors.blue,
-              ),
-              SalomonBottomBarItem(
-                icon: const Icon(
-                  Icons.network_check,
-                  size: 30,
-                ),
-                title: const Text("Speed"),
-                selectedColor: const Color(0xFFbdecb6),
-              ),
-              SalomonBottomBarItem(
-                icon: const Icon(
-                  Icons.settings,
-                  size: 30,
-                ),
-                title: const Text("Settings"),
-                selectedColor: const Color(0xFF114846),
-              ),
-            ],
-            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-            currentIndex: tabsRouter.activeIndex,
-            onTap: tabsRouter.setActiveIndex,
-          );
-        },
       ),
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      routes: const [
+        StatusRouter(),
+        BandsRouter(),
+        SpeedRouter(),
+        SettingsRouter(),
+      ],
+      bottomNavigationBuilder: (_, tabsRouter) {
+        return SalomonBottomBar(
+          items: [
+            SalomonBottomBarItem(
+              icon: const Icon(
+                Icons.network_cell,
+                size: 30,
+              ),
+              title: const Text("Status"),
+              selectedColor: Colors.purple,
+            ),
+            SalomonBottomBarItem(
+              icon: const Icon(
+                Icons.settings_input_antenna,
+                size: 30,
+              ),
+              title: const Text("Bands"),
+              selectedColor: Colors.blue,
+            ),
+            SalomonBottomBarItem(
+              icon: const Icon(
+                Icons.network_check,
+                size: 30,
+              ),
+              title: const Text("Speed"),
+              selectedColor: Colors.green,
+            ),
+            SalomonBottomBarItem(
+              icon: const Icon(
+                Icons.settings,
+                size: 30,
+              ),
+              title: const Text("Settings"),
+              selectedColor: const Color(0xFF114846),
+            ),
+          ],
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          currentIndex: tabsRouter.activeIndex,
+          onTap: tabsRouter.setActiveIndex,
+        );
+      },
     );
   }
 }
