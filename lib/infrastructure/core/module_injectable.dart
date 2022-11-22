@@ -12,7 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 @module
 abstract class FlutterModule {
   @LazySingleton()
-  HuaweiRouterApi get sentricApi => HuaweiRouterApi.create(
+  HuaweiRouterApi get huaweiApi => HuaweiRouterApi.create(
         ChopperClient(
           interceptors: [
             PathInterceptor(),
