@@ -32,7 +32,7 @@ Future<_i1.GetIt> $initGetIt(
     environmentFilter,
   );
   final flutterModule = _$FlutterModule();
-  gh.lazySingleton<_i3.HuaweiRouterApi>(() => flutterModule.sentricApi);
+  gh.lazySingleton<_i3.HuaweiRouterApi>(() => flutterModule.huaweiApi);
   await gh.factoryAsync<_i4.SharedPreferences>(
     () => flutterModule.prefs,
     preResolve: true,

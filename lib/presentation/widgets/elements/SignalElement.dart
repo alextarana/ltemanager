@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 class SignalElement extends StatelessWidget {
   final bool isActive;
   final int index;
+  // ignore: avoid_field_initializers_in_const_classes
   final List<int> indexes = [0, 1, 2, 3, 4];
 
-  SignalElement({Key key, @required this.isActive, @required this.index})
+  SignalElement({Key? key, required this.isActive, required this.index})
       : super(key: key);
 
   @override

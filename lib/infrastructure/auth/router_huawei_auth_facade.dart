@@ -161,8 +161,9 @@ class RouterHuaweiAuthFacade implements IAuthFacade {
   @override
   Future<Either<AuthFailure, Unit>> isSignedIn() async {
     try {
-      final response =
-          await _api.loginState().catchError((onError) => throw Exception());
+      final response = await _api
+          .fetchLoginState()
+          .catchError((onError) => throw Exception());
 
       if (response.isSuccessful) {
         final body =
