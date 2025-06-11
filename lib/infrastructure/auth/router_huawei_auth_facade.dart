@@ -15,6 +15,7 @@ import 'package:ltemanager2/infrastructure/core/router_huawei_api.dart';
 import 'package:chopper/chopper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+@Named("HuaweiRouterAuthFacade")
 @LazySingleton(as: IAuthFacade)
 class RouterHuaweiAuthFacade implements IAuthFacade {
   final HuaweiRouterApi _api;

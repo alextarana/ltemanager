@@ -9,7 +9,8 @@ import 'package:ltemanager2/domain/auth/i_auth_facade.dart';
 import 'package:ltemanager2/domain/auth/value_objects.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-@LazySingleton(as: IAuthFacade, instanceName: 'RouterZteAuthFacade')
+@Named("ZTERouterAuthFacade")
+@LazySingleton(as: IAuthFacade)
 class RouterZteAuthFacade implements IAuthFacade {
   final SharedPreferences _sharedPreferences;
 
@@ -37,13 +38,17 @@ class RouterZteAuthFacade implements IAuthFacade {
       if (ldResp.statusCode != 200) {
         return left(const AuthFailure.serverError());
       }
-      final ld = (jsonDecode(ldResp.body) as Map<String, dynamic>)['LD'] as String;
+      final ld =
+          (jsonDecode(ldResp.body) as Map<String, dynamic>)['LD'] as String;
 
-      final first = sha256.convert(utf8.encode(passwordStr)).toString().toUpperCase();
-      final second = sha256.convert(utf8.encode('$first$ld')).toString().toUpperCase();
+      final first =
+          sha256.convert(utf8.encode(passwordStr)).toString().toUpperCase();
+      final second =
+          sha256.convert(utf8.encode('$first$ld')).toString().toUpperCase();
 
       final loginResp = await http.get(
-        Uri.parse('$urlStr/goform/goform_set_cmd_process?isTest=false&goformId=LOGIN&password=$second'),
+        Uri.parse(
+            '$urlStr/goform/goform_set_cmd_process?isTest=false&goformId=LOGIN&password=$second'),
         headers: {'referer': urlStr},
       );
 
