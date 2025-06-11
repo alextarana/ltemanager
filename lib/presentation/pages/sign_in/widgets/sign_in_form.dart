@@ -7,10 +7,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ltemanager2/application/auth/auth_bloc.dart';
 import 'package:ltemanager2/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:ltemanager2/domain/core/manufacturer.dart';
 import 'package:ltemanager2/presentation/routes/router.gr.dart';
 
-class SignInForm extends StatelessWidget {
+class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
+
+  @override
+  State<SignInForm> createState() => _SignInFormState();
+}
+
+class _SignInFormState extends State<SignInForm> {
+  Manufacturer _manufacturer = currentManufacturer;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +74,27 @@ class SignInForm extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
+                DropdownButton<Manufacturer>(
+                  value: _manufacturer,
+                  onChanged: (value) {
+                    if (value != null) {
+                      setState(() {
+                        _manufacturer = value;
+                        currentManufacturer = value;
+                      });
+                    }
+                  },
+                  items: const [
+                    DropdownMenuItem(
+                      value: Manufacturer.huawei,
+                      child: Text('Huawei'),
+                    ),
+                    DropdownMenuItem(
+                      value: Manufacturer.zte,
+                      child: Text('ZTE'),
+                    ),
+                  ],
+                ),
                 AutofillGroup(
                   child: Column(
                     children: [

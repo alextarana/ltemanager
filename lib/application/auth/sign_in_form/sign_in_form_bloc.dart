@@ -6,6 +6,8 @@ import 'package:injectable/injectable.dart';
 import 'package:ltemanager2/domain/auth/auth_failure.dart';
 import 'package:ltemanager2/domain/auth/i_auth_facade.dart';
 import 'package:ltemanager2/domain/auth/value_objects.dart';
+import 'package:ltemanager2/domain/core/manufacturer.dart';
+import 'package:ltemanager2/injection.dart';
 
 part 'sign_in_form_bloc.freezed.dart';
 part 'sign_in_form_event.dart';
@@ -62,7 +64,10 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             ),
           );
 
-          failureOrSuccess = await _authFacade.signInWithEmailAndPassword(
+          final facade = (currentManufacturer == Manufacturer.huawei)
+              ? _authFacade
+              : getIt<IAuthFacade>(instanceName: 'RouterGenericAuthFacade');
+          failureOrSuccess = await facade.signInWithEmailAndPassword(
             url: state.ipAddress,
             username: state.username,
             password: state.password,
