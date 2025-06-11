@@ -3,6 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:ltemanager2/domain/auth/i_auth_facade.dart';
+import 'package:ltemanager2/domain/core/manufacturer.dart';
+import 'package:ltemanager2/injection.dart';
 
 part 'auth_bloc.freezed.dart';
 part 'auth_event.dart';
@@ -15,7 +17,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(this._authFacade) : super(const AuthState.initial()) {
     on<SignOut>(
       (event, emit) async {
-        final result = await _authFacade.signOut();
+        final facade = (currentManufacturer == Manufacturer.huawei)
+            ? _authFacade
+            : getIt<IAuthFacade>(instanceName: 'RouterZteAuthFacade');
+        final result = await facade.signOut();
         emit(
           result.fold(
             (_) => const AuthState.authenticated(),
@@ -25,7 +30,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       },
     );
     on<AuthCheckRequested>((event, emit) async {
-      final userOption = await _authFacade.isSignedIn();
+      final facade = (currentManufacturer == Manufacturer.huawei)
+          ? _authFacade
+          : getIt<IAuthFacade>(instanceName: 'RouterZteAuthFacade');
+      final userOption = await facade.isSignedIn();
 
       debugPrint(userOption.toString());
 
