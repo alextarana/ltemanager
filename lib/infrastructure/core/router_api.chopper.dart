@@ -18,7 +18,7 @@ class _$RouterApi extends RouterApi {
 
   @override
   Future<Response<dynamic>> requestAuthToken(Map<String, String> body) {
-    final String $url = '/api/webserver/SesTokInfo';
+    final Uri $url = Uri.parse('/api/webserver/SesTokInfo');
     final $body = body;
     final Request $request = Request(
       'GET',
@@ -31,7 +31,7 @@ class _$RouterApi extends RouterApi {
 
   @override
   Future<Response<dynamic>> signInWithEmailAndPassword(String body) {
-    final String $url = '/api/user/login';
+    final Uri $url = Uri.parse('/api/user/login');
     final $body = body;
     final Request $request = Request(
       'POST',
@@ -44,7 +44,7 @@ class _$RouterApi extends RouterApi {
 
   @override
   Future<Response<dynamic>> loginState() {
-    final String $url = '/api/user/state-login';
+    final Uri $url = Uri.parse('/api/user/state-login');
     final Request $request = Request(
       'GET',
       $url,
@@ -55,7 +55,7 @@ class _$RouterApi extends RouterApi {
 
   @override
   Future<Response<dynamic>> logout(String body) {
-    final String $url = '/api/user/logout';
+    final Uri $url = Uri.parse('/api/user/logout');
     final $body = body;
     final Request $request = Request(
       'GET',

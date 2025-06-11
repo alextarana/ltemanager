@@ -9,12 +9,12 @@ class LoggerInterceptor implements RequestInterceptor, ResponseInterceptor {
 
   @override
   FutureOr<Request> onRequest(Request request) {
-    _logger.i([
-      request.method,
-      request.path,
-      request.headers,
-      request.body,
-    ]);
+    // _logger.i([
+    //   request.method,
+    //   request.path,
+    //   request.headers,
+    //   request.body,
+    // ]);
     return request;
   }
 

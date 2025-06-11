@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:glass_kit/glass_kit.dart';
 
 class StatusPage extends StatelessWidget {
   const StatusPage({Key? key}) : super(key: key);
@@ -15,10 +14,7 @@ class StatusPage extends StatelessWidget {
               Expanded(
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    return GlassContainer.clearGlass(
-                      elevation: 4,
-                      borderWidth: 0,
-                      borderRadius: BorderRadius.circular(20),
+                    return Container(
                       height: 200,
                       width: constraints.maxWidth,
                       child: Padding(
@@ -35,10 +31,7 @@ class StatusPage extends StatelessWidget {
               Expanded(
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    return GlassContainer.clearGlass(
-                      elevation: 4,
-                      borderWidth: 0,
-                      borderRadius: BorderRadius.circular(20),
+                    return Container(
                       height: 200,
                       width: constraints.maxWidth,
                       child: Padding(
@@ -68,10 +61,7 @@ class StatusPage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          GlassContainer.clearGlass(
-            elevation: 4,
-            borderWidth: 0,
-            borderRadius: BorderRadius.circular(20),
+          Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Padding(

@@ -30,12 +30,11 @@ dependencies:
   logger: ^1.1.0
   rxdart: ^0.27.3
   shared_preferences: ^2.0.13
-  url_launcher: ^6.0.20
+  url_launcher: ^6.3.1
+  url_launcher_ios: ^6.3.3
   uuid: ^3.0.6
   xml2json: ^5.3.2
   salomon_bottom_bar: ^3.2.0
-  glass_kit: ^2.0.1
-  google_mobile_ads: ^2.3.0
 
 flutter_icons:
   android: "launcher_icon"

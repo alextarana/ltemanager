@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'status_failure.dart';
 
@@ -12,7 +12,7 @@ part of 'status_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$StatusFailure {
@@ -69,25 +69,25 @@ class _$StatusFailureCopyWithImpl<$Res, $Val extends StatusFailure>
 }
 
 /// @nodoc
-abstract class _$$LoadingErrorCopyWith<$Res> {
-  factory _$$LoadingErrorCopyWith(
-          _$LoadingError value, $Res Function(_$LoadingError) then) =
-      __$$LoadingErrorCopyWithImpl<$Res>;
+abstract class _$$LoadingErrorImplCopyWith<$Res> {
+  factory _$$LoadingErrorImplCopyWith(
+          _$LoadingErrorImpl value, $Res Function(_$LoadingErrorImpl) then) =
+      __$$LoadingErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingErrorCopyWithImpl<$Res>
-    extends _$StatusFailureCopyWithImpl<$Res, _$LoadingError>
-    implements _$$LoadingErrorCopyWith<$Res> {
-  __$$LoadingErrorCopyWithImpl(
-      _$LoadingError _value, $Res Function(_$LoadingError) _then)
+class __$$LoadingErrorImplCopyWithImpl<$Res>
+    extends _$StatusFailureCopyWithImpl<$Res, _$LoadingErrorImpl>
+    implements _$$LoadingErrorImplCopyWith<$Res> {
+  __$$LoadingErrorImplCopyWithImpl(
+      _$LoadingErrorImpl _value, $Res Function(_$LoadingErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingError implements LoadingError {
-  const _$LoadingError();
+class _$LoadingErrorImpl implements LoadingError {
+  const _$LoadingErrorImpl();
 
   @override
   String toString() {
@@ -95,9 +95,9 @@ class _$LoadingError implements LoadingError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingError);
+        (other.runtimeType == runtimeType && other is _$LoadingErrorImpl);
   }
 
   @override
@@ -161,5 +161,5 @@ class _$LoadingError implements LoadingError {
 }
 
 abstract class LoadingError implements StatusFailure {
-  const factory LoadingError() = _$LoadingError;
+  const factory LoadingError() = _$LoadingErrorImpl;
 }

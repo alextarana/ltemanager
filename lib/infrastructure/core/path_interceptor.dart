@@ -19,9 +19,9 @@ class PathInterceptor implements RequestInterceptor, ResponseInterceptor {
   FutureOr<Request> onRequest(Request request) {
     final _url = _sharedPreferences.getString("_baseUrl");
 
-    debugPrint(request.path);
+    // debugPrint(request.path);
 
-    return request.copyWith(origin: _url);
+    return request.copyWith(baseUri: Uri(host: _url));
   }
 
   @override

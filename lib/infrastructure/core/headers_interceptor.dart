@@ -42,7 +42,6 @@ class HeadersHanldeInterceptor
         "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12";
 
     debugPrint(headers.toString());
-    debugPrint(request.path);
 
     return request.copyWith(
       headers: headers,
