@@ -1,0 +1,1 @@
+enum Manufacturer { huawei, zte }

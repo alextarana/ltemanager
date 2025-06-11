@@ -8,9 +8,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ltemanager2/application/auth/auth_bloc.dart';
 import 'package:ltemanager2/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:ltemanager2/presentation/routes/router.gr.dart';
+import 'package:ltemanager2/domain/auth/manufacturer.dart';
+import 'package:ltemanager2/utilities/SharedPreferencesFunctions.dart';
 
-class SignInForm extends StatelessWidget {
+class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
+
+  @override
+  State<SignInForm> createState() => _SignInFormState();
+}
+
+class _SignInFormState extends State<SignInForm> {
+  Manufacturer _manufacturer = Manufacturer.huawei;
 
   @override
   Widget build(BuildContext context) {
@@ -256,16 +265,37 @@ class SignInForm extends StatelessWidget {
                                   ),
                                   (_) => null,
                                 ),
-                            onEditingComplete: () =>
-                                TextInput.finishAutofillContext(),
-                          ),
-                        ),
-                      ),
-                    ],
+                    onEditingComplete: () =>
+                        TextInput.finishAutofillContext(),
                   ),
                 ),
-                const Spacer(),
-                const SizedBox(height: 8),
+              ),
+              const SizedBox(height: 8),
+              DropdownButton<Manufacturer>(
+                value: _manufacturer,
+                onChanged: (val) {
+                  if (val != null) {
+                    setState(() {
+                      _manufacturer = val;
+                    });
+                  }
+                },
+                items: const [
+                  DropdownMenuItem(
+                    value: Manufacturer.huawei,
+                    child: Text('Huawei'),
+                  ),
+                  DropdownMenuItem(
+                    value: Manufacturer.zte,
+                    child: Text('ZTE'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const Spacer(),
+        const SizedBox(height: 8),
                 OutlinedButton(
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size(250, 50)),
@@ -279,6 +309,7 @@ class SignInForm extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
+                    saveSharedPref('_manufacturer', _manufacturer.name);
                     context.read<SignInFormBloc>().add(
                           const SignInFormEvent
                               .signInWithEmailAndPasswordPressed(),

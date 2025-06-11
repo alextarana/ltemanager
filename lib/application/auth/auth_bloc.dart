@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:ltemanager2/domain/auth/i_auth_facade.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'auth_bloc.freezed.dart';
 part 'auth_event.dart';
@@ -10,12 +11,18 @@ part 'auth_state.dart';
 
 @injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final IAuthFacade _authFacade;
+  final IAuthFacade _huaweiAuthFacade;
+  final IAuthFacade _zteAuthFacade;
+  final SharedPreferences _preferences;
 
-  AuthBloc(this._authFacade) : super(const AuthState.initial()) {
+  AuthBloc(
+    this._huaweiAuthFacade,
+    @Named('RouterZteAuthFacade') this._zteAuthFacade,
+    this._preferences,
+  ) : super(const AuthState.initial()) {
     on<SignOut>(
       (event, emit) async {
-        final result = await _authFacade.signOut();
+        final result = await _getFacade().signOut();
         emit(
           result.fold(
             (_) => const AuthState.authenticated(),
@@ -25,7 +32,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       },
     );
     on<AuthCheckRequested>((event, emit) async {
-      final userOption = await _authFacade.isSignedIn();
+      final userOption = await _getFacade().isSignedIn();
 
       debugPrint(userOption.toString());
 
@@ -36,5 +43,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         ),
       );
     });
+  }
+
+  IAuthFacade _getFacade() {
+    final manufacturer = _preferences.getString('_manufacturer') ?? 'huawei';
+    return manufacturer == 'zte' ? _zteAuthFacade : _huaweiAuthFacade;
   }
 }
