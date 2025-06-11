@@ -66,7 +66,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
 
           final facade = (currentManufacturer == Manufacturer.huawei)
               ? _authFacade
-              : getIt<IAuthFacade>(instanceName: 'RouterGenericAuthFacade');
+              : getIt<IAuthFacade>(instanceName: 'RouterZteAuthFacade');
           failureOrSuccess = await facade.signInWithEmailAndPassword(
             url: state.ipAddress,
             username: state.username,

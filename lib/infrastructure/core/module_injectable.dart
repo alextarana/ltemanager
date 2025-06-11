@@ -6,6 +6,7 @@ import 'package:ltemanager2/infrastructure/core/headers_interceptor.dart';
 import 'package:ltemanager2/infrastructure/core/logger_interceptor.dart';
 import 'package:ltemanager2/infrastructure/core/path_interceptor.dart';
 import 'package:ltemanager2/infrastructure/core/router_huawei_api.dart';
+import 'package:ltemanager2/infrastructure/core/router_zte_api.dart';
 import 'package:ltemanager2/infrastructure/core/xml_converter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,6 +14,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 abstract class FlutterModule {
   @LazySingleton()
   HuaweiRouterApi get huaweiApi => HuaweiRouterApi.create(
+        ChopperClient(
+          interceptors: [
+            PathInterceptor(),
+            HeadersHanldeInterceptor(),
+            LoggerInterceptor(Logger()),
+          ],
+          converter: XMLConverter(),
+        ),
+      );
+
+  @LazySingleton()
+  ZteRouterApi get zteApi => ZteRouterApi.create(
         ChopperClient(
           interceptors: [
             PathInterceptor(),

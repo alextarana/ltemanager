@@ -14,10 +14,11 @@ import 'application/auth/sign_in_form/sign_in_form_bloc.dart' as _i9;
 import 'domain/auth/i_auth_facade.dart' as _i5;
 import 'infrastructure/auth/router_auth_facade.dart' as _i6;
 import 'infrastructure/auth/router_huawei_auth_facade.dart' as _i8;
+import 'infrastructure/auth/router_zte_auth_facade.dart' as _i12;
 import 'infrastructure/core/module_injectable.dart' as _i11;
 import 'infrastructure/core/router_api.dart' as _i7;
-import 'infrastructure/core/router_huawei_api.dart'
-    as _i3; // ignore_for_file: unnecessary_lambdas
+import 'infrastructure/core/router_huawei_api.dart' as _i3;
+import 'infrastructure/core/router_zte_api.dart' as _i13; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -33,6 +34,7 @@ Future<_i1.GetIt> $initGetIt(
   );
   final flutterModule = _$FlutterModule();
   gh.lazySingleton<_i3.HuaweiRouterApi>(() => flutterModule.huaweiApi);
+  gh.lazySingleton<_i13.ZteRouterApi>(() => flutterModule.zteApi);
   await gh.factoryAsync<_i4.SharedPreferences>(
     () => flutterModule.prefs,
     preResolve: true,
@@ -48,6 +50,13 @@ Future<_i1.GetIt> $initGetIt(
         get<_i3.HuaweiRouterApi>(),
         get<_i4.SharedPreferences>(),
       ));
+  gh.lazySingleton<_i5.IAuthFacade>(
+    () => _i12.RouterZteAuthFacade(
+      get<_i13.ZteRouterApi>(),
+      get<_i4.SharedPreferences>(),
+    ),
+    instanceName: 'RouterZteAuthFacade',
+  );
   gh.factory<_i9.SignInFormBloc>(
       () => _i9.SignInFormBloc(get<_i5.IAuthFacade>()));
   gh.factory<_i10.AuthBloc>(() => _i10.AuthBloc(get<_i5.IAuthFacade>()));
