@@ -153,4 +153,36 @@ class _$ZteRouterApi extends ZteRouterApi {
     );
     return client.send<dynamic, dynamic>($request);
   }
+
+  @override
+  Future<Response<dynamic>> fetchZteStatus({
+    required String cmd,
+    String multiData = '1',
+  }) {
+    final String \$url = '/goform/goform_get_cmd_process';
+    final Map<String, dynamic> \$params = <String, dynamic>{
+      'cmd': cmd,
+      'multi_data': multiData,
+    };
+    final Request \$request = Request(
+      'GET',
+      \$url,
+      client.baseUrl,
+      parameters: \$params,
+    );
+    return client.send<dynamic, dynamic>(\$request);
+  }
+
+  @override
+  Future<Response<dynamic>> sendZteCommand(Map<String, dynamic> body) {
+    final String \$url = '/goform/goform_set_cmd_process';
+    final \$body = body;
+    final Request \$request = Request(
+      'POST',
+      \$url,
+      client.baseUrl,
+      body: \$body,
+    );
+    return client.send<dynamic, dynamic>(\$request);
+  }
 }
