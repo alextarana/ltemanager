@@ -85,7 +85,7 @@ class RouterAuthFacade implements IAuthFacade {
         );
 
         final logininfo =
-            '<?xml version="1.0"encoding="UTF-8"?><request><Username>$usernameStr</Username><Password>$authinfo</Password><password_type>4</password_type>';
+            '<?xml version="1.0" encoding="UTF-8"?><request><Username>$usernameStr</Username><Password>$authinfo</Password><password_type>4</password_type></request>';
 
         final responseLogin = await _api.signInWithEmailAndPassword(logininfo);
 
@@ -144,7 +144,7 @@ class RouterAuthFacade implements IAuthFacade {
   @override
   Future<Either<AuthFailure, Unit>> signOut() async {
     const logoutInfo =
-        '<?xml version:"1.0" encoding="UTF-8"?><request><Logout>1</Logout></request>';
+        '<?xml version="1.0" encoding="UTF-8"?><request><Logout>1</Logout></request>';
 
     try {
       final response = await _api.logout(logoutInfo);
